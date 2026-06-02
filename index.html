@@ -30,6 +30,7 @@
           <a href="#fluxo">🗺️ Fluxo de Projeto</a>
           <a href="#construcao-profissional">🏗️ Construção Profissional</a>
           <a href="#html-pronto-css">✅ HTML pronto para CSS</a>
+          <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#trilha">📚 Trilha de Estudos</a>
           <a href="#html">🧱 HTML Semântico</a>
           <a href="#classes">🏷️ Classes Estratégicas</a>
@@ -903,6 +904,260 @@
               <p>Protege tabelas no celular com rolagem horizontal.</p>
             </article>
           </div>
+        </section>
+
+
+
+        <section id="css-pronto-js" class="section-card">
+          <span class="eyebrow">Portão de aprovação</span>
+          <h2>🎨 CSS Pronto para JavaScript</h2>
+
+          <p>
+            Depois que o HTML está aprovado, o CSS entra para transformar a estrutura em interface.
+            Essa etapa não é apenas “deixar bonito”. É criar um sistema visual organizado,
+            responsivo, acessível, confortável e preparado para receber comportamento com JavaScript.
+          </p>
+
+          <blockquote>
+            JavaScript não deve entrar para consertar interface mal construída. Primeiro o visual
+            precisa estar organizado, responsivo e aprovado.
+          </blockquote>
+
+          <h3>🧭 Etapa 1 — Confirmar que o HTML está aprovado</h3>
+
+          <p>
+            Antes de escrever CSS, eu volto ao portão anterior e confirmo se a estrutura está pronta.
+            Se o HTML ainda está confuso, o CSS vira gambiarra.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O HTML tem estrutura base completa</li>
+            <li><input type="checkbox" /> O conteúdo está organizado em blocos semânticos</li>
+            <li><input type="checkbox" /> As classes estratégicas já foram aplicadas</li>
+            <li><input type="checkbox" /> Acessibilidade básica foi revisada</li>
+            <li><input type="checkbox" /> A página sem CSS ainda faz sentido</li>
+          </ul>
+
+          <h3>🎛️ Etapa 2 — Criar o sistema de variáveis</h3>
+
+          <p>
+            Variáveis tornam o CSS mais profissional porque centralizam decisões visuais:
+            cores, fontes, espaçamentos, sombras, bordas e tamanhos.
+          </p>
+
+          <pre><code>:root {
+  --color-bg: #050816;
+  --color-surface: #111827;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-primary: #facc15;
+  --color-border: rgba(148, 163, 184, 0.22);
+
+  --font-main: system-ui, sans-serif;
+  --container: 1180px;
+
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+}</code></pre>
+
+          <h3>🧹 Etapa 3 — Aplicar reset e base global</h3>
+
+          <p>
+            O reset remove comportamentos inconsistentes do navegador e cria uma base previsível.
+            A base global define leitura, cor, fonte e comportamento geral da página.
+          </p>
+
+          <pre><code>*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}</code></pre>
+
+          <h3>📐 Etapa 4 — Criar layout base</h3>
+
+          <p>
+            O layout profissional começa com largura controlada, espaçamentos consistentes
+            e seções previsíveis.
+          </p>
+
+          <pre><code>.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}</code></pre>
+
+          <h3>🧱 Etapa 5 — Estilizar componentes principais</h3>
+
+          <p>
+            Componentes são partes reutilizáveis da interface. Um projeto profissional não estiliza
+            tudo de forma aleatória. Ele cria padrões.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Componente</th>
+                  <th>O que revisar</th>
+                  <th>Critério profissional</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Header</td>
+                  <td>Logo, navegação e alinhamento</td>
+                  <td>Precisa orientar o usuário sem poluir a tela.</td>
+                </tr>
+                <tr>
+                  <td>Hero</td>
+                  <td>Título, texto, botão e impacto inicial</td>
+                  <td>Precisa deixar claro o objetivo da página.</td>
+                </tr>
+                <tr>
+                  <td>Cards</td>
+                  <td>Espaçamento, borda, sombra e leitura</td>
+                  <td>Precisam parecer parte do mesmo sistema visual.</td>
+                </tr>
+                <tr>
+                  <td>Botões</td>
+                  <td>Tamanho, contraste, toque e foco</td>
+                  <td>Devem ser claros, acessíveis e confortáveis no celular.</td>
+                </tr>
+                <tr>
+                  <td>Formulários</td>
+                  <td>Labels, campos, espaçamento e botão</td>
+                  <td>Devem ser fáceis de preencher e entender.</td>
+                </tr>
+                <tr>
+                  <td>Tabelas</td>
+                  <td>Largura, rolagem e legibilidade</td>
+                  <td>Não podem estourar a tela no celular.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>📱 Etapa 6 — Testar responsividade</h3>
+
+          <p>
+            CSS só pode ser aprovado se funcionar em diferentes telas. Um layout profissional
+            precisa se adaptar sem perder leitura, organização e conforto.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> 320px — celular pequeno aprovado</li>
+            <li><input type="checkbox" /> 375px — celular comum aprovado</li>
+            <li><input type="checkbox" /> 425px — celular grande aprovado</li>
+            <li><input type="checkbox" /> 768px — tablet aprovado</li>
+            <li><input type="checkbox" /> 1366px — notebook aprovado</li>
+            <li><input type="checkbox" /> 1920px — desktop grande aprovado</li>
+          </ul>
+
+          <h3>🔍 Etapa 7 — Inspecionar com DevTools</h3>
+
+          <p>
+            DevTools é parte do processo. Eu não aprovo CSS apenas olhando de longe. Eu inspeciono
+            estrutura, espaçamento, regras aplicadas, grid, flex, largura e comportamento.
+          </p>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Selecionar o bloco</strong>
+              <span>Inspecionar header, hero, cards, tabela, formulário e footer.</span>
+            </div>
+
+            <div>
+              <strong>2. Conferir box model</strong>
+              <span>Ver margin, padding, border e tamanho real do elemento.</span>
+            </div>
+
+            <div>
+              <strong>3. Testar valores</strong>
+              <span>Ajustar temporariamente no DevTools antes de salvar no CSS.</span>
+            </div>
+
+            <div>
+              <strong>4. Validar responsivo</strong>
+              <span>Usar modo dispositivo para conferir celular e tablet.</span>
+            </div>
+
+            <div>
+              <strong>5. Aplicar no arquivo</strong>
+              <span>Salvar no CSS apenas o que foi aprovado visualmente.</span>
+            </div>
+          </div>
+
+          <h3>✅ Checklist final — CSS aprovado para JavaScript</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O CSS está ligado corretamente</li>
+            <li><input type="checkbox" /> O arquivo CSS tem ordem lógica</li>
+            <li><input type="checkbox" /> Variáveis foram usadas para decisões importantes</li>
+            <li><input type="checkbox" /> Reset e base global foram aplicados</li>
+            <li><input type="checkbox" /> Container e seções estão consistentes</li>
+            <li><input type="checkbox" /> Header e navegação estão claros</li>
+            <li><input type="checkbox" /> Hero comunica bem o objetivo da página</li>
+            <li><input type="checkbox" /> Cards seguem o mesmo padrão visual</li>
+            <li><input type="checkbox" /> Botões têm contraste e área de toque confortável</li>
+            <li><input type="checkbox" /> Formulários estão legíveis e organizados</li>
+            <li><input type="checkbox" /> Tabelas não quebram no celular</li>
+            <li><input type="checkbox" /> O layout foi testado em telas diferentes</li>
+            <li><input type="checkbox" /> O foco visível foi preservado</li>
+            <li><input type="checkbox" /> A leitura está confortável</li>
+            <li><input type="checkbox" /> O DevTools foi usado na revisão</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos antes de ir para JavaScript</h3>
+
+          <ul class="feature-list">
+            <li>Começar JavaScript com layout ainda quebrando no celular.</li>
+            <li>Usar JS para esconder problema de CSS.</li>
+            <li>Ignorar contraste ruim.</li>
+            <li>Deixar botões pequenos demais para toque.</li>
+            <li>Usar espaçamentos aleatórios sem padrão.</li>
+            <li>Não testar formulário no celular.</li>
+            <li>Não revisar tabelas em telas pequenas.</li>
+            <li>Não usar DevTools antes de aprovar.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            CSS aprovado. A interface está pronta para receber JavaScript com segurança,
+            clareza, responsividade e padrão profissional.
+          </blockquote>
         </section>
 
 
