@@ -43,6 +43,7 @@
           <a href="#css-base-zero">🎨 CSS do zero</a>
           <a href="#css-layout-profissional">📐 CSS Layout</a>
           <a href="#css-componentes">🧩 CSS Componentes</a>
+          <a href="#css-responsivo-profissional">📱 CSS Responsivo</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -2583,6 +2584,202 @@ select {
           <blockquote>
             Componentes CSS aprovados. A interface possui blocos visuais consistentes, reutilizáveis,
             legíveis, acessíveis e preparados para responsividade.
+          </blockquote>
+        </section>
+
+
+
+        <section id="css-responsivo-profissional" class="section-card">
+          <span class="eyebrow">CSS na prática</span>
+          <h2>📱 CSS Responsivo Profissional</h2>
+
+          <p>
+            Responsividade é a capacidade da interface funcionar bem em telas diferentes. Um projeto
+            profissional precisa ser confortável no celular, tablet, notebook e desktop. Não basta
+            ficar bonito apenas na tela onde foi criado.
+          </p>
+
+          <blockquote>
+            Site profissional não quebra no celular. Ele se adapta, mantém leitura, preserva
+            navegação e continua fácil de usar.
+          </blockquote>
+
+          <h3>🧠 Etapa 1 — Pensar mobile desde o começo</h3>
+
+          <p>
+            O celular não é um detalhe final. Em muitos projetos, ele é a tela principal do usuário.
+            Por isso, cada seção, card, botão, tabela e formulário precisa ser pensado para caber,
+            respirar e funcionar no toque.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Textos não ficam grudados nas bordas</li>
+            <li><input type="checkbox" /> Botões têm área de toque confortável</li>
+            <li><input type="checkbox" /> Cards viram uma coluna quando necessário</li>
+            <li><input type="checkbox" /> Tabelas não estouram a tela</li>
+            <li><input type="checkbox" /> Imagens respeitam a largura disponível</li>
+            <li><input type="checkbox" /> O usuário não precisa dar zoom para ler</li>
+          </ul>
+
+          <h3>📦 Etapa 2 — Container responsivo</h3>
+
+          <pre><code>.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}</code></pre>
+
+          <h3>📐 Etapa 3 — Grid responsivo</h3>
+
+          <pre><code>.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}</code></pre>
+
+          <pre><code>@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+
+          <h3>🤝 Etapa 4 — Flex com quebra de linha</h3>
+
+          <pre><code>.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions .btn {
+    width: 100%;
+  }
+}</code></pre>
+
+          <h3>🔠 Etapa 5 — Tipografia fluida</h3>
+
+          <pre><code>.hero__title {
+  font-size: clamp(2rem, 8vw, 5rem);
+  line-height: 1.05;
+}</code></pre>
+
+          <h3>📊 Etapa 6 — Tabelas seguras no celular</h3>
+
+          <pre><code>.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  min-width: 640px;
+}</code></pre>
+
+          <h3>🖼️ Etapa 7 — Imagens, vídeos e iframes responsivos</h3>
+
+          <pre><code>img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}</code></pre>
+
+          <h3>🧭 Etapa 8 — Menu adaptável</h3>
+
+          <pre><code>@media (max-width: 760px) {
+  .site-nav ul {
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}</code></pre>
+
+          <h3>📱 Larguras obrigatórias de teste</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Largura</th>
+                  <th>Tipo de tela</th>
+                  <th>O que validar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>320px</td>
+                  <td>Celular pequeno</td>
+                  <td>Texto, botões, menu e cards sem corte lateral.</td>
+                </tr>
+                <tr>
+                  <td>375px</td>
+                  <td>Celular comum</td>
+                  <td>Leitura confortável e espaçamento equilibrado.</td>
+                </tr>
+                <tr>
+                  <td>425px</td>
+                  <td>Celular grande</td>
+                  <td>Hero, cards e formulário proporcionais.</td>
+                </tr>
+                <tr>
+                  <td>768px</td>
+                  <td>Tablet</td>
+                  <td>Grade, menu e espaçamentos intermediários.</td>
+                </tr>
+                <tr>
+                  <td>1366px</td>
+                  <td>Notebook</td>
+                  <td>Largura máxima, respiro e composição visual.</td>
+                </tr>
+                <tr>
+                  <td>1920px</td>
+                  <td>Desktop grande</td>
+                  <td>Conteúdo não deve espalhar demais.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>✅ Checklist — Responsividade aprovada</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Testei em 320px</li>
+            <li><input type="checkbox" /> Testei em 375px</li>
+            <li><input type="checkbox" /> Testei em 425px</li>
+            <li><input type="checkbox" /> Testei em 768px</li>
+            <li><input type="checkbox" /> Testei em notebook/desktop</li>
+            <li><input type="checkbox" /> Não existe rolagem horizontal indevida</li>
+            <li><input type="checkbox" /> Títulos não cortam no celular</li>
+            <li><input type="checkbox" /> Botões são fáceis de tocar</li>
+            <li><input type="checkbox" /> Cards se reorganizam corretamente</li>
+            <li><input type="checkbox" /> Tabelas têm rolagem segura</li>
+            <li><input type="checkbox" /> Formulários estão confortáveis</li>
+            <li><input type="checkbox" /> Imagens e iframes não estouram a tela</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos em responsividade</h3>
+
+          <ul class="feature-list">
+            <li>Testar só no tamanho da própria tela.</li>
+            <li>Usar largura fixa grande em elementos principais.</li>
+            <li>Deixar texto cortando na direita.</li>
+            <li>Deixar menu pequeno demais para toque.</li>
+            <li>Não testar tabela no celular.</li>
+            <li>Usar fonte gigante sem <code>clamp()</code> ou ajuste mobile.</li>
+            <li>Ignorar rolagem horizontal indevida.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Responsividade aprovada. A interface mantém leitura, navegação, toque, proporção e
+            organização em diferentes tamanhos de tela.
           </blockquote>
         </section>
 
