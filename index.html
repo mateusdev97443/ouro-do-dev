@@ -45,6 +45,7 @@
           <a href="#css-componentes">🧩 CSS Componentes</a>
           <a href="#css-responsivo-profissional">📱 CSS Responsivo</a>
           <a href="#portao-final-css">🏁 Portão Final CSS</a>
+          <a href="#js-base-zero">⚙️ JS do zero</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -3599,6 +3600,173 @@ iframe {
             <li><input type="checkbox" /> Rodar Lighthouse</li>
             <li><input type="checkbox" /> Atualizar README</li>
           </ul>
+        </section>
+
+
+
+        <section id="js-base-zero" class="section-card">
+          <span class="eyebrow">JavaScript na prática</span>
+          <h2>⚙️ JavaScript do Zero — Ligação, DOM e Eventos</h2>
+
+          <p>
+            JavaScript entra depois que o HTML e o CSS foram aprovados. Ele adiciona comportamento,
+            interação e resposta às ações do usuário. A primeira missão não é criar algo complexo:
+            é ligar o arquivo corretamente, selecionar elementos com segurança e testar eventos.
+          </p>
+
+          <blockquote>
+            JavaScript profissional não entra para consertar bagunça. Ele entra para dar vida a uma
+            estrutura e interface que já foram aprovadas.
+          </blockquote>
+
+          <h3>🧭 Etapa 1 — Confirmar que HTML e CSS estão aprovados</h3>
+
+          <p>
+            Antes de escrever JavaScript, eu confirmo se a estrutura e a interface estão prontas.
+            Se o HTML está confuso ou o CSS quebra no celular, o JavaScript só aumenta o problema.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> HTML foi aprovado no Portão Final HTML</li>
+            <li><input type="checkbox" /> CSS foi aprovado no Portão Final CSS</li>
+            <li><input type="checkbox" /> A página abre corretamente sem erro visual grave</li>
+            <li><input type="checkbox" /> O layout funciona no celular</li>
+            <li><input type="checkbox" /> A interface já está pronta para receber comportamento</li>
+          </ul>
+
+          <h3>🔗 Etapa 2 — Ligar o JavaScript no HTML</h3>
+
+          <p>
+            O JavaScript normalmente fica no final do <code>body</code>, porque assim o HTML já foi
+            carregado antes do script tentar acessar os elementos.
+          </p>
+
+          <pre><code>&lt;script src="scripts/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Existe uma pasta <code>scripts</code></li>
+            <li><input type="checkbox" /> Existe um arquivo <code>script.js</code></li>
+            <li><input type="checkbox" /> O caminho no <code>src</code> está correto</li>
+            <li><input type="checkbox" /> O script está ligado no final do <code>body</code></li>
+          </ul>
+
+          <h3>🧠 Etapa 3 — Entender o DOM</h3>
+
+          <p>
+            DOM é a representação da página que o JavaScript consegue acessar e modificar. Com ele,
+            eu posso selecionar elementos, trocar classes, ler valores, criar eventos e reagir ao
+            usuário.
+          </p>
+
+          <pre><code>const title = document.querySelector("h1");
+console.log(title);</code></pre>
+
+          <h3>🎯 Etapa 4 — Selecionar elementos com segurança</h3>
+
+          <p>
+            Antes de usar um elemento, eu preciso garantir que ele existe. Isso evita erro no
+            console e deixa o código mais seguro.
+          </p>
+
+          <pre><code>const button = document.querySelector(".menu-button");
+
+if (button) {
+  console.log("Botão encontrado.");
+}</code></pre>
+
+          <h3>🖱️ Etapa 5 — Criar evento de clique</h3>
+
+          <p>
+            Eventos permitem responder às ações do usuário. O exemplo mais comum é o clique em um
+            botão.
+          </p>
+
+          <pre><code>const button = document.querySelector(".menu-button");
+
+if (button) {
+  button.addEventListener("click", () => {
+    console.log("Botão clicado.");
+  });
+}</code></pre>
+
+          <h3>🏷️ Etapa 6 — Usar classList</h3>
+
+          <p>
+            O <code>classList</code> permite adicionar, remover ou alternar classes. Isso é muito
+            usado para abrir menus, mostrar mensagens, ativar estados e controlar visual.
+          </p>
+
+          <pre><code>const button = document.querySelector(".menu-button");
+const menu = document.querySelector(".site-nav");
+
+if (button && menu) {
+  button.addEventListener("click", () => {
+    menu.classList.toggle("is-open");
+  });
+}</code></pre>
+
+          <h3>🧪 Etapa 7 — Testar no console</h3>
+
+          <p>
+            O console do navegador mostra erros, avisos e mensagens de teste. Antes de aprovar o
+            JavaScript, eu preciso abrir o DevTools e conferir se não existe erro crítico.
+          </p>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Abrir DevTools</strong>
+              <span>Entrar na aba Console do navegador.</span>
+            </div>
+
+            <div>
+              <strong>2. Recarregar a página</strong>
+              <span>Verificar se aparece erro vermelho ao carregar.</span>
+            </div>
+
+            <div>
+              <strong>3. Testar botões e interações</strong>
+              <span>Clicar nos elementos e observar se tudo responde corretamente.</span>
+            </div>
+
+            <div>
+              <strong>4. Corrigir antes de avançar</strong>
+              <span>Erro crítico no console bloqueia a próxima etapa.</span>
+            </div>
+          </div>
+
+          <h3>✅ Checklist — Base JavaScript aprovada</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> JavaScript está ligado corretamente no HTML</li>
+            <li><input type="checkbox" /> O arquivo <code>script.js</code> existe</li>
+            <li><input type="checkbox" /> Usei <code>querySelector</code> com seletor claro</li>
+            <li><input type="checkbox" /> Conferi se o elemento existe antes de usar</li>
+            <li><input type="checkbox" /> Criei pelo menos um evento com intenção</li>
+            <li><input type="checkbox" /> Usei <code>classList</code> quando precisei alterar estado visual</li>
+            <li><input type="checkbox" /> Testei no console</li>
+            <li><input type="checkbox" /> Não existe erro crítico em vermelho</li>
+            <li><input type="checkbox" /> A interação funciona no celular e no desktop</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos nessa fase</h3>
+
+          <ul class="feature-list">
+            <li>Ligar o script no caminho errado.</li>
+            <li>Tentar usar elemento que não existe.</li>
+            <li>Ignorar erro vermelho no console.</li>
+            <li>Copiar código sem entender o que ele faz.</li>
+            <li>Usar JavaScript para esconder problema de HTML ou CSS.</li>
+            <li>Criar interação que só funciona no desktop.</li>
+            <li>Colocar lógica grande antes de dominar seleção e eventos.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Base JavaScript aprovada. O projeto possui script ligado, elementos selecionados com
+            segurança, eventos testados e console revisado para avançar para funcionalidades reais.
+          </blockquote>
         </section>
 
 
