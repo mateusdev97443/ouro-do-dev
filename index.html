@@ -31,6 +31,7 @@
           <a href="#construcao-profissional">🏗️ Construção Profissional</a>
           <a href="#html-pronto-css">✅ HTML pronto para CSS</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
+          <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#trilha">📚 Trilha de Estudos</a>
           <a href="#html">🧱 HTML Semântico</a>
           <a href="#classes">🏷️ Classes Estratégicas</a>
@@ -1531,6 +1532,223 @@ iframe {
             <li><input type="checkbox" /> Atualizar README</li>
           </ul>
         </section>
+
+
+        <section id="js-pronto-publicacao" class="section-card">
+          <span class="eyebrow">Portão de aprovação</span>
+          <h2>⚙️ JavaScript Pronto para Publicação</h2>
+
+          <p>
+            JavaScript entra depois que o HTML e o CSS já estão aprovados. Ele serve para adicionar
+            comportamento, interação, validação e funcionalidades reais. Ele não deve ser usado para
+            consertar uma estrutura ruim ou esconder uma interface mal resolvida.
+          </p>
+
+          <blockquote>
+            JavaScript profissional melhora a experiência sem quebrar estrutura, acessibilidade,
+            responsividade ou clareza do projeto.
+          </blockquote>
+
+          <h3>🧭 Etapa 1 — Confirmar que HTML e CSS estão aprovados</h3>
+
+          <p>
+            Antes de escrever JavaScript, eu reviso os portões anteriores. Se o layout ainda quebra
+            no celular ou o HTML está mal estruturado, o JavaScript vai aumentar a bagunça.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> HTML foi aprovado como estrutura profissional</li>
+            <li><input type="checkbox" /> CSS foi aprovado como interface responsiva</li>
+            <li><input type="checkbox" /> A página funciona visualmente sem JavaScript</li>
+            <li><input type="checkbox" /> O layout está confortável no celular</li>
+            <li><input type="checkbox" /> Acessibilidade básica foi preservada</li>
+          </ul>
+
+          <h3>🔗 Etapa 2 — Ligar o JavaScript corretamente</h3>
+
+          <p>
+            O arquivo JavaScript normalmente deve ser ligado no final do <code>body</code>, depois
+            do HTML principal. Assim o navegador já carregou os elementos antes do script tentar
+            acessá-los.
+          </p>
+
+          <pre><code>&lt;script src="scripts/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>🎯 Etapa 3 — Selecionar elementos com segurança</h3>
+
+          <p>
+            Antes de criar eventos, eu preciso selecionar os elementos certos e garantir que eles
+            existem na página. Isso evita erros no console.
+          </p>
+
+          <pre><code>const button = document.querySelector(".menu-button");
+const menu = document.querySelector(".site-nav");
+
+if (button && menu) {
+  button.addEventListener("click", () => {
+    menu.classList.toggle("is-open");
+  });
+}</code></pre>
+
+          <h3>🖱️ Etapa 4 — Criar eventos com intenção</h3>
+
+          <p>
+            Eventos são respostas a ações do usuário: clique, digitação, envio de formulário,
+            rolagem, foco ou mudança de campo.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Evento</th>
+                  <th>Uso comum</th>
+                  <th>Cuidado profissional</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>click</code></td>
+                  <td>Botões, menus e ações</td>
+                  <td>O elemento precisa ter nome claro e ser acessível.</td>
+                </tr>
+                <tr>
+                  <td><code>submit</code></td>
+                  <td>Formulários</td>
+                  <td>Validar dados sem impedir acessibilidade.</td>
+                </tr>
+                <tr>
+                  <td><code>input</code></td>
+                  <td>Campos de texto</td>
+                  <td>Evitar validações agressivas que atrapalham digitação.</td>
+                </tr>
+                <tr>
+                  <td><code>change</code></td>
+                  <td>Checkbox, select e opções</td>
+                  <td>Salvar ou reagir apenas quando fizer sentido.</td>
+                </tr>
+                <tr>
+                  <td><code>scroll</code></td>
+                  <td>Menu ativo, botão voltar ao topo</td>
+                  <td>Evitar excesso de lógica pesada na rolagem.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>🧪 Etapa 5 — Validar formulários com responsabilidade</h3>
+
+          <p>
+            JavaScript pode melhorar formulários, mas o HTML já deve começar com atributos básicos
+            como <code>required</code>, <code>type="email"</code>, <code>minlength</code> e
+            <code>label</code>.
+          </p>
+
+          <pre><code>const form = document.querySelector(".contact-form");
+
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const email = form.querySelector("#email");
+
+    if (!email.value.includes("@")) {
+      alert("Digite um email válido.");
+      return;
+    }
+
+    alert("Formulário enviado com sucesso!");
+  });
+}</code></pre>
+
+          <h3>♿ Etapa 6 — Preservar acessibilidade</h3>
+
+          <p>
+            JavaScript não pode tornar a página pior para quem usa teclado, leitor de tela ou
+            navegação assistiva. Interação profissional precisa ser clara, previsível e acessível.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Botões interativos usam <code>button</code>, não <code>div</code></li>
+            <li><input type="checkbox" /> Elementos clicáveis possuem texto claro</li>
+            <li><input type="checkbox" /> Menu abre e fecha sem perder navegação</li>
+            <li><input type="checkbox" /> Estados visuais não dependem apenas de cor</li>
+            <li><input type="checkbox" /> Foco visível continua funcionando</li>
+            <li><input type="checkbox" /> O usuário entende o que aconteceu após a ação</li>
+          </ul>
+
+          <h3>🔍 Etapa 7 — Conferir o console</h3>
+
+          <p>
+            Antes de publicar, eu abro o DevTools e verifico o console. Um projeto profissional não
+            deve ser entregue com erro crítico de JavaScript.
+          </p>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Abrir DevTools</strong>
+              <span>Entrar na aba Console do navegador.</span>
+            </div>
+
+            <div>
+              <strong>2. Recarregar a página</strong>
+              <span>Verificar se aparece erro vermelho logo ao carregar.</span>
+            </div>
+
+            <div>
+              <strong>3. Testar interações</strong>
+              <span>Clicar em botões, menus, checklists, formulários e elementos dinâmicos.</span>
+            </div>
+
+            <div>
+              <strong>4. Corrigir erros críticos</strong>
+              <span>Erro vermelho no console precisa ser entendido antes da publicação.</span>
+            </div>
+
+            <div>
+              <strong>5. Testar no celular</strong>
+              <span>Interação que funciona no desktop também precisa funcionar no toque.</span>
+            </div>
+          </div>
+
+          <h3>✅ Checklist final — JavaScript aprovado para publicação</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> JavaScript está ligado no final do HTML</li>
+            <li><input type="checkbox" /> Seletores foram conferidos</li>
+            <li><input type="checkbox" /> Eventos funcionam corretamente</li>
+            <li><input type="checkbox" /> O console não possui erro crítico</li>
+            <li><input type="checkbox" /> Interações funcionam no celular</li>
+            <li><input type="checkbox" /> Interações funcionam no desktop</li>
+            <li><input type="checkbox" /> Formulários foram testados</li>
+            <li><input type="checkbox" /> Acessibilidade não foi prejudicada</li>
+            <li><input type="checkbox" /> Código está organizado em funções claras</li>
+            <li><input type="checkbox" /> O comportamento esperado foi testado manualmente</li>
+            <li><input type="checkbox" /> A página continua funcionando se uma interação não for usada</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos antes de publicar</h3>
+
+          <ul class="feature-list">
+            <li>Publicar projeto com erro vermelho no console.</li>
+            <li>Usar JavaScript para compensar HTML mal estruturado.</li>
+            <li>Usar JavaScript para esconder CSS quebrado.</li>
+            <li>Criar interação que só funciona no desktop.</li>
+            <li>Transformar <code>div</code> em botão sem necessidade.</li>
+            <li>Remover foco ou dificultar navegação por teclado.</li>
+            <li>Não testar formulário antes da entrega.</li>
+            <li>Copiar script sem entender o que ele faz.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            JavaScript aprovado. O projeto está pronto para validação final, GitHub, publicação,
+            README e registro como evidência profissional.
+          </blockquote>
+        </section>
+
 
         <section id="github" class="section-card">
           <span class="eyebrow">Histórico profissional</span>
