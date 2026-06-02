@@ -29,6 +29,7 @@
           <a href="#manifesto">🧠 Manifesto</a>
           <a href="#fluxo">🗺️ Fluxo de Projeto</a>
           <a href="#construcao-profissional">🏗️ Construção Profissional</a>
+          <a href="#html-pronto-css">✅ HTML pronto para CSS</a>
           <a href="#trilha">📚 Trilha de Estudos</a>
           <a href="#html">🧱 HTML Semântico</a>
           <a href="#classes">🏷️ Classes Estratégicas</a>
@@ -442,6 +443,226 @@
           </div>
         </section>
 
+
+
+
+        <section id="html-pronto-css" class="section-card">
+          <span class="eyebrow">Portão de aprovação</span>
+          <h2>✅ HTML Pronto para CSS</h2>
+
+          <p>
+            Antes de começar a estilizar uma página, eu preciso garantir que o HTML está preparado.
+            Um HTML profissional não é apenas um conjunto de tags funcionando. Ele precisa ter
+            estrutura, semântica, organização, acessibilidade básica e classes estratégicas.
+          </p>
+
+          <blockquote>
+            CSS não deve corrigir HTML mal planejado. Primeiro a estrutura fica certa. Depois a
+            aparência entra com segurança.
+          </blockquote>
+
+          <h3>🧭 Etapa 1 — Entender o objetivo da página</h3>
+
+          <p>
+            Antes de escrever código, eu preciso saber o que a página deve comunicar. Isso evita
+            criar tags aleatórias, seções sem sentido e conteúdo desorganizado.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Defini o tema do projeto</li>
+            <li><input type="checkbox" /> Defini o público da página</li>
+            <li><input type="checkbox" /> Defini o objetivo principal</li>
+            <li><input type="checkbox" /> Listei as seções necessárias</li>
+            <li><input type="checkbox" /> Sei qual ação o usuário deve fazer</li>
+          </ul>
+
+          <h3>🧱 Etapa 2 — Criar a base obrigatória do documento</h3>
+
+          <p>
+            Todo projeto começa com uma base HTML limpa. Essa estrutura garante idioma correto,
+            responsividade, título, descrição e conexão com o CSS.
+          </p>
+
+          <pre><code>&lt;!doctype html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Nome do Projeto&lt;/title&gt;
+    &lt;meta name="description" content="Descrição clara do projeto." /&gt;
+    &lt;link rel="stylesheet" href="styles/style.css" /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <h3>🏛️ Etapa 3 — Organizar o corpo da página</h3>
+
+          <p>
+            O <code>body</code> precisa ter uma arquitetura clara. O caminho profissional começa
+            com <code>header</code>, <code>main</code> e <code>footer</code>. Depois entram as
+            seções internas.
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;nav class="site-nav" aria-label="Navegação principal"&gt;
+      &lt;!-- links principais --&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main class="page-main"&gt;
+    &lt;section class="hero"&gt;&lt;/section&gt;
+    &lt;section class="section"&gt;&lt;/section&gt;
+    &lt;article class="section"&gt;&lt;/article&gt;
+    &lt;aside class="section"&gt;&lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="site-footer"&gt;&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>🏷️ Etapa 4 — Aplicar classes estratégicas</h3>
+
+          <p>
+            As classes entram antes do CSS para preparar o projeto. Elas precisam explicar o papel
+            do bloco, não apenas a aparência dele.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Parte</th>
+                  <th>Classe recomendada</th>
+                  <th>Motivo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cabeçalho</td>
+                  <td><code>site-header</code></td>
+                  <td>Identifica o topo principal do site.</td>
+                </tr>
+                <tr>
+                  <td>Navegação</td>
+                  <td><code>site-nav</code></td>
+                  <td>Separa claramente a área de links.</td>
+                </tr>
+                <tr>
+                  <td>Conteúdo principal</td>
+                  <td><code>page-main</code></td>
+                  <td>Marca a área central da página.</td>
+                </tr>
+                <tr>
+                  <td>Primeira seção</td>
+                  <td><code>hero</code></td>
+                  <td>Define a primeira dobra de destaque.</td>
+                </tr>
+                <tr>
+                  <td>Seções comuns</td>
+                  <td><code>section</code></td>
+                  <td>Cria padrão para blocos repetidos.</td>
+                </tr>
+                <tr>
+                  <td>Cards</td>
+                  <td><code>card</code></td>
+                  <td>Prepara blocos visuais reutilizáveis.</td>
+                </tr>
+                <tr>
+                  <td>Tabela</td>
+                  <td><code>table-wrapper</code></td>
+                  <td>Protege a tabela no celular.</td>
+                </tr>
+                <tr>
+                  <td>Formulário</td>
+                  <td><code>form-group</code></td>
+                  <td>Agrupa label, campo e mensagem.</td>
+                </tr>
+                <tr>
+                  <td>Rodapé</td>
+                  <td><code>site-footer</code></td>
+                  <td>Identifica o fechamento da página.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>♿ Etapa 5 — Revisar acessibilidade básica antes do CSS</h3>
+
+          <p>
+            Acessibilidade não começa no CSS. Ela começa no HTML. Se a estrutura já nasce errada,
+            a página fica fraca mesmo que o visual fique bonito.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Navegação possui <code>aria-label</code> quando necessário</li>
+            <li><input type="checkbox" /> Imagens informativas possuem <code>alt</code></li>
+            <li><input type="checkbox" /> Inputs possuem <code>label</code> conectado com <code>for</code> e <code>id</code></li>
+            <li><input type="checkbox" /> Botões têm texto claro</li>
+            <li><input type="checkbox" /> Links dizem para onde levam</li>
+            <li><input type="checkbox" /> Iframes possuem <code>title</code></li>
+            <li><input type="checkbox" /> A hierarquia de títulos faz sentido</li>
+          </ul>
+
+          <h3>🧪 Etapa 6 — Validar se o HTML está pronto</h3>
+
+          <p>
+            Antes de ir para o CSS, eu faço uma revisão completa. Essa aprovação protege o projeto
+            contra retrabalho e cria base sólida para o visual.
+          </p>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Ler o HTML de cima para baixo</strong>
+              <span>Verificar se a estrutura tem lógica: topo, conteúdo principal e rodapé.</span>
+            </div>
+
+            <div>
+              <strong>2. Conferir semântica</strong>
+              <span>Garantir que cada tag foi usada pelo significado, não por aparência.</span>
+            </div>
+
+            <div>
+              <strong>3. Conferir acessibilidade</strong>
+              <span>Revisar alt, labels, title, links, headings e navegação.</span>
+            </div>
+
+            <div>
+              <strong>4. Conferir classes</strong>
+              <span>Verificar se as classes são claras, reutilizáveis e preparadas para CSS.</span>
+            </div>
+
+            <div>
+              <strong>5. Abrir no navegador</strong>
+              <span>Mesmo sem CSS, a página precisa mostrar conteúdo em ordem compreensível.</span>
+            </div>
+          </div>
+
+          <h3>✅ Checklist final — HTML aprovado para CSS</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> A estrutura base do documento está completa</li>
+            <li><input type="checkbox" /> O <code>head</code> possui charset, viewport, title, description e link CSS</li>
+            <li><input type="checkbox" /> O <code>body</code> está organizado em blocos semânticos</li>
+            <li><input type="checkbox" /> Existe apenas um <code>main</code> principal</li>
+            <li><input type="checkbox" /> As seções têm títulos claros</li>
+            <li><input type="checkbox" /> As classes estratégicas foram aplicadas</li>
+            <li><input type="checkbox" /> As imagens possuem <code>alt</code> adequado</li>
+            <li><input type="checkbox" /> Os formulários possuem <code>label</code></li>
+            <li><input type="checkbox" /> Tabelas possuem estrutura correta</li>
+            <li><input type="checkbox" /> Iframes possuem <code>title</code></li>
+            <li><input type="checkbox" /> O HTML está indentado</li>
+            <li><input type="checkbox" /> A página aberta sem CSS ainda faz sentido</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            HTML aprovado. A estrutura está pronta para receber CSS com segurança,
+            organização e padrão profissional.
+          </blockquote>
+        </section>
 
 
         <section id="html" class="section-card">
