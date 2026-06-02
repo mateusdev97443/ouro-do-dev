@@ -533,14 +533,72 @@
           </div>
         </section>
 
+
         <section id="css" class="section-card">
-          <span class="eyebrow">Sistema visual</span>
-          <h2>🎨 CSS ME Standard</h2>
+          <span class="eyebrow">Sistema visual profissional</span>
+          <h2>🎨 CSS ME Standard — Meu Padrão Oficial de CSS</h2>
 
           <p>
-            O CSS ME Standard é meu padrão oficial para criar interfaces modernas, organizadas,
-            responsivas, acessíveis e fáceis de manter.
+            O CSS ME Standard é o meu padrão pessoal para transformar HTML semântico em interfaces
+            modernas, organizadas, responsivas, acessíveis e fáceis de manter.
           </p>
+
+          <blockquote>
+            CSS profissional não é sair colocando cor. É criar um sistema visual com ordem,
+            intenção, consistência e capacidade de manutenção.
+          </blockquote>
+
+          <div class="content-grid">
+            <article class="info-card">
+              <h3>🧠 O que é CSS</h3>
+              <p>
+                CSS é a camada visual da página. Ele controla cores, tamanhos, espaçamentos,
+                fontes, layout, responsividade, estados e aparência dos componentes.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>🏷️ Seletores</h3>
+              <p>
+                Seletores escolhem quais elementos serão estilizados. No meu padrão, eu priorizo
+                classes claras em vez de depender de tags soltas.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>📏 Valores e unidades</h3>
+              <p>
+                Uso <code>rem</code>, <code>%</code>, <code>min()</code>, <code>clamp()</code>,
+                <code>vw</code> e <code>vh</code> com intenção, pensando em responsividade.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>📦 Box Model</h3>
+              <p>
+                Todo elemento é uma caixa: conteúdo, padding, border e margin. Entender isso evita
+                layout quebrado e espaçamento bagunçado.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>🧬 Cascata e herança</h3>
+              <p>
+                O CSS segue ordem, especificidade e herança. Por isso, o arquivo precisa ser
+                organizado por camadas e não escrito de qualquer jeito.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>📱 Responsividade</h3>
+              <p>
+                O CSS precisa funcionar no celular, tablet, notebook e desktop. Um site bonito só
+                no desktop ainda não é profissional.
+              </p>
+            </article>
+          </div>
+
+          <h3>🧱 Ordem oficial do CSS ME Standard</h3>
 
           <ol class="ordered-list">
             <li>Tokens / variáveis</li>
@@ -552,28 +610,172 @@
             <li>Hero</li>
             <li>Seções</li>
             <li>Componentes</li>
+            <li>Cards</li>
+            <li>Formulários</li>
+            <li>Tabelas</li>
+            <li>Mídias</li>
+            <li>Footer</li>
             <li>Responsivo</li>
+            <li>Ajustes finais</li>
           </ol>
+
+          <h3>🎛️ Modelo base de variáveis</h3>
 
           <pre><code>:root {
   --color-bg: #050816;
-  --color-surface: #101827;
-  --color-primary: #facc15;
+  --color-surface: #111827;
   --color-text: #f8fafc;
   --color-muted: #94a3b8;
+  --color-primary: #facc15;
+  --color-border: rgba(148, 163, 184, 0.22);
+
+  --font-main: system-ui, sans-serif;
   --container: 1180px;
+
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.32);
+}</code></pre>
+
+          <h3>🧹 Reset obrigatório</h3>
+
+          <pre><code>*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}</code></pre>
+
+          <h3>📐 Container profissional</h3>
+
+          <pre><code>.container {
   width: min(100% - 2rem, var(--container));
   margin-inline: auto;
+}</code></pre>
+
+          <p>
+            O <code>.container</code> impede que o conteúdo fique grudado nas bordas no celular
+            e largo demais no desktop.
+          </p>
+
+          <h3>🧩 Section padrão</h3>
+
+          <pre><code>.section {
+  padding-block: var(--space-xl);
 }
 
-:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 4px;
+.section__header {
+  max-width: 760px;
+  margin-bottom: var(--space-lg);
+}
+
+.section__title {
+  font-size: clamp(2rem, 4vw, 4rem);
 }</code></pre>
+
+          <h3>🃏 Card padrão</h3>
+
+          <pre><code>.card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}</code></pre>
+
+          <h3>📱 Media query base</h3>
+
+          <pre><code>@media (max-width: 768px) {
+  .section {
+    padding-block: var(--space-lg);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+
+          <h3>🔍 Como estudar CSS com DevTools</h3>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Inspecionar o elemento</strong>
+              <span>Clicar com botão direito, abrir DevTools e selecionar o bloco visual.</span>
+            </div>
+
+            <div>
+              <strong>2. Ver o CSS aplicado</strong>
+              <span>Conferir quais regras estão ativas e de qual linha elas vêm.</span>
+            </div>
+
+            <div>
+              <strong>3. Entender margin e padding</strong>
+              <span>Usar o box model para descobrir espaços internos e externos.</span>
+            </div>
+
+            <div>
+              <strong>4. Testar alterações temporárias</strong>
+              <span>Editar valores no DevTools antes de mexer no arquivo real.</span>
+            </div>
+
+            <div>
+              <strong>5. Aplicar no CSS oficial</strong>
+              <span>Só depois de validar visualmente, salvar a mudança no arquivo.</span>
+            </div>
+          </div>
+
+          <h3>✅ Checklist CSS Profissional</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> CSS está ligado corretamente no HTML</li>
+            <li><input type="checkbox" /> Usei variáveis no <code>:root</code></li>
+            <li><input type="checkbox" /> Apliquei reset básico</li>
+            <li><input type="checkbox" /> Usei <code>box-sizing: border-box</code></li>
+            <li><input type="checkbox" /> Criei <code>.container</code></li>
+            <li><input type="checkbox" /> Criei espaçamento padrão para seções</li>
+            <li><input type="checkbox" /> Usei classes claras e profissionais</li>
+            <li><input type="checkbox" /> Evitei cores soltas repetidas</li>
+            <li><input type="checkbox" /> Testei no celular</li>
+            <li><input type="checkbox" /> Testei no desktop</li>
+            <li><input type="checkbox" /> Conferi contraste e leitura</li>
+            <li><input type="checkbox" /> Inspecionei com DevTools</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos em CSS</h3>
+
+          <ul class="feature-list">
+            <li>Escrever CSS sem ordem.</li>
+            <li>Usar nomes como <code>.caixa1</code>, <code>.texto2</code> e <code>.div3</code>.</li>
+            <li>Repetir a mesma cor em vários lugares sem variável.</li>
+            <li>Colocar todo estilo direto em tags sem necessidade.</li>
+            <li>Ignorar responsividade.</li>
+            <li>Remover foco visível sem substituir por outro.</li>
+            <li>Usar margem aleatória para “empurrar” layout.</li>
+            <li>Não testar no celular.</li>
+            <li>Não usar DevTools para entender o problema.</li>
+          </ul>
         </section>
+
 
         <section id="layout" class="section-card">
           <span class="eyebrow">Arquitetura visual</span>
