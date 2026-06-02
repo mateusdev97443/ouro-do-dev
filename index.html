@@ -38,6 +38,7 @@
           <a href="#html-estrutura-zero">🧱 HTML do zero</a>
           <a href="#html-conteudo-midia">📝 Conteúdo HTML</a>
           <a href="#html-tabelas-formularios">📊 Tabelas e Formulários</a>
+          <a href="#html-acessibilidade-seo">♿ HTML Acessível e SEO</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -1100,6 +1101,222 @@ touch scripts/script.js</code></pre>
           <blockquote>
             Tabelas e formulários aprovados. Os dados estão organizados, os campos estão acessíveis
             e a estrutura está pronta para estilização profissional.
+          </blockquote>
+        </section>
+
+
+
+        <section id="html-acessibilidade-seo" class="section-card">
+          <span class="eyebrow">HTML5 profissional</span>
+          <h2>♿ HTML5 — Acessibilidade, SEO e Boas Práticas</h2>
+
+          <p>
+            Um HTML profissional precisa ser compreensível para pessoas, navegadores, buscadores
+            e tecnologias assistivas. Acessibilidade, SEO e boas práticas não são detalhes finais:
+            fazem parte da estrutura desde o começo.
+          </p>
+
+          <blockquote>
+            HTML de qualidade não é apenas visível na tela. Ele precisa ser legível, semântico,
+            acessível, encontrável e fácil de manter.
+          </blockquote>
+
+          <h3>♿ Etapa 1 — Acessibilidade começa no HTML</h3>
+
+          <p>
+            Acessibilidade significa permitir que mais pessoas consigam navegar, entender e usar
+            a página. Isso inclui pessoas usando teclado, leitor de tela, celular, zoom alto ou
+            conexões diferentes.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> A página tem estrutura semântica clara</li>
+            <li><input type="checkbox" /> A navegação é compreensível</li>
+            <li><input type="checkbox" /> Imagens informativas possuem <code>alt</code></li>
+            <li><input type="checkbox" /> Formulários possuem <code>label</code></li>
+            <li><input type="checkbox" /> Iframes possuem <code>title</code></li>
+            <li><input type="checkbox" /> Links têm texto claro</li>
+            <li><input type="checkbox" /> Botões dizem exatamente o que fazem</li>
+          </ul>
+
+          <h3>🖼️ Etapa 2 — Texto alternativo em imagens</h3>
+
+          <p>
+            O <code>alt</code> descreve a imagem quando ela carrega com problema ou quando o usuário
+            usa leitor de tela. O texto precisa explicar a função da imagem dentro da página.
+          </p>
+
+          <pre><code>&lt;!-- Imagem informativa --&gt;
+&lt;img
+  src="assets/imagens/pescador.jpg"
+  alt="Pescador segurando uma vara de pesca ao pôr do sol"
+/&gt;
+
+&lt;!-- Imagem decorativa --&gt;
+&lt;img src="assets/imagens/detalhe-visual.png" alt="" /&gt;</code></pre>
+
+          <h3>📝 Etapa 3 — Formulários acessíveis</h3>
+
+          <p>
+            Todo campo importante precisa de um <code>label</code>. Placeholder não substitui label.
+            O label continua visível, ajuda na clareza e melhora a navegação assistiva.
+          </p>
+
+          <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required /&gt;</code></pre>
+
+          <h3>🔗 Etapa 4 — Links e botões claros</h3>
+
+          <p>
+            Links levam para lugares. Botões executam ações. O texto precisa deixar isso claro.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Elemento</th>
+                  <th>Uso correto</th>
+                  <th>Erro comum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>a</code></td>
+                  <td>Navegar para página, seção ou site</td>
+                  <td>Usar link como botão sem necessidade</td>
+                </tr>
+                <tr>
+                  <td><code>button</code></td>
+                  <td>Executar ação na página</td>
+                  <td>Usar <code>div</code> clicável</td>
+                </tr>
+                <tr>
+                  <td>Texto do link</td>
+                  <td>“Ver projeto no GitHub”</td>
+                  <td>“Clique aqui” sem contexto</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>🔎 Etapa 5 — SEO básico começa no head</h3>
+
+          <p>
+            SEO básico ajuda buscadores e plataformas a entenderem a página. Mesmo em projetos
+            simples, o <code>title</code> e a <code>meta description</code> precisam existir.
+          </p>
+
+          <pre><code>&lt;title&gt;Pesca Esportiva — Aventura e Natureza&lt;/title&gt;
+
+&lt;meta
+  name="description"
+  content="Página sobre pesca esportiva com dicas, espécies, modalidades e contato."
+/&gt;</code></pre>
+
+          <h3>🏷️ Etapa 6 — Hierarquia de títulos</h3>
+
+          <p>
+            A hierarquia de títulos organiza o conteúdo. Recrutadores, ferramentas e leitores de
+            tela percebem quando a estrutura está bem pensada.
+          </p>
+
+          <pre><code>&lt;h1&gt;Pesca Esportiva&lt;/h1&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;Modalidades da Pesca Esportiva&lt;/h2&gt;
+
+  &lt;article&gt;
+    &lt;h3&gt;Pesca com iscas artificiais&lt;/h3&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+
+          <h3>🧼 Etapa 7 — Boas práticas de organização</h3>
+
+          <p>
+            Código organizado mostra profissionalismo. Um projeto precisa ser fácil de ler,
+            corrigir, evoluir e apresentar.
+          </p>
+
+          <ul class="feature-list">
+            <li>Usar indentação consistente.</li>
+            <li>Nomear classes pelo papel do bloco.</li>
+            <li>Separar estrutura, estilo e comportamento.</li>
+            <li>Evitar IDs duplicados.</li>
+            <li>Evitar tags abertas ou fechadas errado.</li>
+            <li>Evitar excesso de <code>div</code> sem propósito.</li>
+            <li>Manter nomes de arquivos simples e claros.</li>
+          </ul>
+
+          <h3>🧪 Etapa 8 — Como validar HTML profissional</h3>
+
+          <p>
+            Depois de estruturar, eu valido. Validação não é burocracia: é o momento de encontrar
+            erros que podem passar despercebidos no visual.
+          </p>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Ler o código</strong>
+              <span>Conferir se a página tem começo, meio e fechamento claro.</span>
+            </div>
+
+            <div>
+              <strong>2. Testar no navegador</strong>
+              <span>Abrir a página sem depender de CSS para entender o conteúdo.</span>
+            </div>
+
+            <div>
+              <strong>3. Conferir acessibilidade básica</strong>
+              <span>Alt, label, title, headings, links e botões.</span>
+            </div>
+
+            <div>
+              <strong>4. Rodar ferramenta</strong>
+              <span>Usar validador HTML ou HTMLHint quando disponível.</span>
+            </div>
+
+            <div>
+              <strong>5. Corrigir antes do CSS</strong>
+              <span>Não começar visual enquanto a estrutura ainda tem erro importante.</span>
+            </div>
+          </div>
+
+          <h3>✅ Checklist final — HTML acessível e profissional</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O documento possui <code>lang</code> correto</li>
+            <li><input type="checkbox" /> O <code>title</code> é claro</li>
+            <li><input type="checkbox" /> A <code>meta description</code> existe</li>
+            <li><input type="checkbox" /> A hierarquia de títulos faz sentido</li>
+            <li><input type="checkbox" /> O conteúdo está organizado semanticamente</li>
+            <li><input type="checkbox" /> Imagens informativas possuem <code>alt</code></li>
+            <li><input type="checkbox" /> Formulários possuem <code>label</code></li>
+            <li><input type="checkbox" /> Iframes possuem <code>title</code></li>
+            <li><input type="checkbox" /> Links têm texto claro</li>
+            <li><input type="checkbox" /> Botões têm texto de ação claro</li>
+            <li><input type="checkbox" /> Não existem IDs duplicados</li>
+            <li><input type="checkbox" /> O HTML está indentado e legível</li>
+            <li><input type="checkbox" /> A estrutura está pronta para CSS</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos</h3>
+
+          <ul class="feature-list">
+            <li>Deixar <code>meta description</code> vazia em projeto final.</li>
+            <li>Usar imagem informativa sem <code>alt</code>.</li>
+            <li>Usar placeholder como se fosse label.</li>
+            <li>Usar texto de link sem contexto.</li>
+            <li>Colocar vários elementos com o mesmo <code>id</code>.</li>
+            <li>Usar <code>div</code> clicável no lugar de <code>button</code>.</li>
+            <li>Ignorar erro de tag mal fechada.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            HTML acessível, semântico e profissional aprovado. A estrutura está pronta para receber
+            CSS com segurança, clareza e padrão de carreira.
           </blockquote>
         </section>
 
