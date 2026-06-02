@@ -292,14 +292,103 @@
         </section>
 
 
+
         <section id="html" class="section-card">
-          <span class="eyebrow">Fundação</span>
-          <h2>🧱 HTML Semântico Profissional</h2>
+          <span class="eyebrow">Fundação profissional</span>
+          <h2>🧱 HTML Mestre — Base de Todo Projeto Front-End</h2>
 
           <p>
-            HTML é a estrutura da casa. Antes de pensar em cor, sombra ou animação, eu preciso
-            montar uma estrutura compreensível, acessível e organizada.
+            HTML é a estrutura da página. Antes de pensar em cor, animação, layout ou JavaScript,
+            eu preciso criar uma base semântica, acessível, organizada e fácil de manter.
           </p>
+
+          <blockquote>
+            HTML profissional não é só fazer aparecer na tela. É estruturar informação com sentido,
+            acessibilidade e intenção.
+          </blockquote>
+
+          <div class="content-grid">
+            <article class="info-card">
+              <h3>✅ Estrutura</h3>
+              <p>
+                Todo projeto começa com <code>doctype</code>, idioma correto, metadados,
+                título, descrição, CSS ligado e conteúdo dentro de <code>body</code>.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>✅ Semântica</h3>
+              <p>
+                Tags como <code>header</code>, <code>main</code>, <code>section</code>,
+                <code>article</code>, <code>aside</code> e <code>footer</code> dão significado
+                ao conteúdo.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>✅ Acessibilidade</h3>
+              <p>
+                Imagens precisam de <code>alt</code>, formulários precisam de
+                <code>label</code>, iframes precisam de <code>title</code> e a navegação precisa
+                fazer sentido.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>✅ Organização</h3>
+              <p>
+                O HTML deve ser legível, indentado, separado por blocos e preparado para receber
+                classes estratégicas.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>✅ SEO básico</h3>
+              <p>
+                Título claro, meta description, hierarquia de headings e conteúdo bem estruturado
+                ajudam mecanismos de busca e usuários.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>✅ Manutenção</h3>
+              <p>
+                Outro desenvolvedor precisa bater o olho no HTML e entender a página sem sofrer.
+              </p>
+            </article>
+          </div>
+
+          <h3>📌 Esqueleto HTML obrigatório</h3>
+
+          <pre><code>&lt;!doctype html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Nome do Projeto&lt;/title&gt;
+    &lt;meta name="description" content="Descrição clara do projeto." /&gt;
+    &lt;link rel="stylesheet" href="styles/style.css" /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;header class="site-header"&gt;
+      &lt;nav class="site-nav" aria-label="Navegação principal"&gt;
+        &lt;!-- links --&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main class="page-main"&gt;
+      &lt;section class="hero"&gt;&lt;/section&gt;
+      &lt;section class="section"&gt;&lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer class="site-footer"&gt;&lt;/footer&gt;
+
+    &lt;script src="scripts/script.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <h3>🧭 Tags essenciais e função profissional</h3>
 
           <div class="table-wrapper">
             <table>
@@ -307,60 +396,101 @@
                 <tr>
                   <th>Tag</th>
                   <th>Função</th>
-                  <th>Uso profissional</th>
+                  <th>Regra profissional</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><code>header</code></td>
                   <td>Cabeçalho</td>
-                  <td>Topo da página ou de uma seção.</td>
+                  <td>Use para topo da página ou introdução de uma seção importante.</td>
                 </tr>
                 <tr>
                   <td><code>nav</code></td>
                   <td>Navegação</td>
-                  <td>Menus principais ou internos.</td>
+                  <td>Use com <code>aria-label</code> quando houver menu de links.</td>
                 </tr>
                 <tr>
                   <td><code>main</code></td>
                   <td>Conteúdo principal</td>
-                  <td>Área central única da página.</td>
+                  <td>Deve existir apenas um <code>main</code> principal por página.</td>
                 </tr>
                 <tr>
                   <td><code>section</code></td>
                   <td>Seção temática</td>
-                  <td>Blocos com assunto próprio.</td>
+                  <td>Use quando o bloco tiver um assunto próprio e geralmente um título.</td>
                 </tr>
                 <tr>
                   <td><code>article</code></td>
                   <td>Conteúdo independente</td>
-                  <td>Cards, posts, notícias ou blocos autônomos.</td>
+                  <td>Use para post, card completo, notícia, aula, projeto ou item autônomo.</td>
                 </tr>
                 <tr>
                   <td><code>aside</code></td>
-                  <td>Complemento</td>
-                  <td>Curiosidades, dicas e conteúdo lateral.</td>
+                  <td>Conteúdo complementar</td>
+                  <td>Use para dicas, curiosidades, observações e conteúdo lateral.</td>
                 </tr>
                 <tr>
                   <td><code>footer</code></td>
                   <td>Rodapé</td>
-                  <td>Direitos, links finais e informações extras.</td>
+                  <td>Use para fechamento, direitos, links finais e informações extras.</td>
+                </tr>
+                <tr>
+                  <td><code>form</code></td>
+                  <td>Formulário</td>
+                  <td>Todo campo precisa de <code>label</code> ligado ao <code>id</code>.</td>
+                </tr>
+                <tr>
+                  <td><code>table</code></td>
+                  <td>Tabela</td>
+                  <td>Use para dados tabulares, não para layout visual.</td>
+                </tr>
+                <tr>
+                  <td><code>img</code></td>
+                  <td>Imagem</td>
+                  <td>Imagem informativa precisa de <code>alt</code> descritivo.</td>
+                </tr>
+                <tr>
+                  <td><code>iframe</code></td>
+                  <td>Conteúdo incorporado</td>
+                  <td>Sempre usar <code>title</code> claro e descritivo.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <pre><code>&lt;header class="site-header"&gt;
-  &lt;nav class="site-nav" aria-label="Navegação principal"&gt;&lt;/nav&gt;
-&lt;/header&gt;
+          <h3>✅ Checklist HTML Mestre</h3>
 
-&lt;main class="page-main"&gt;
-  &lt;section class="hero"&gt;&lt;/section&gt;
-  &lt;section class="section"&gt;&lt;/section&gt;
-&lt;/main&gt;
+          <ul class="checklist">
+            <li><input type="checkbox" /> Usei <code>lang="pt-BR"</code></li>
+            <li><input type="checkbox" /> Usei <code>meta viewport</code></li>
+            <li><input type="checkbox" /> Criei <code>title</code> claro</li>
+            <li><input type="checkbox" /> Criei <code>meta description</code></li>
+            <li><input type="checkbox" /> Usei apenas um <code>main</code> principal</li>
+            <li><input type="checkbox" /> Organizei o conteúdo com tags semânticas</li>
+            <li><input type="checkbox" /> Imagens informativas têm <code>alt</code></li>
+            <li><input type="checkbox" /> Formulários têm <code>label</code> ligado ao campo</li>
+            <li><input type="checkbox" /> Iframes têm <code>title</code></li>
+            <li><input type="checkbox" /> Tabelas foram usadas apenas para dados</li>
+            <li><input type="checkbox" /> Código está indentado e legível</li>
+            <li><input type="checkbox" /> HTML foi validado antes da entrega</li>
+          </ul>
 
-&lt;footer class="site-footer"&gt;&lt;/footer&gt;</code></pre>
+          <h3>⚠️ Erros proibidos em HTML</h3>
+
+          <ul class="feature-list">
+            <li>Usar várias <code>div</code> sem necessidade.</li>
+            <li>Colocar tudo dentro de uma única seção gigante.</li>
+            <li>Usar heading fora de ordem sem motivo.</li>
+            <li>Imagem importante sem <code>alt</code>.</li>
+            <li>Input sem <code>label</code>.</li>
+            <li>Iframe sem <code>title</code>.</li>
+            <li>Tabela usada para montar layout.</li>
+            <li>HTML sem indentação.</li>
+            <li>Link com texto genérico como “clique aqui” sem contexto.</li>
+          </ul>
         </section>
+
 
         <section id="classes" class="section-card">
           <span class="eyebrow">Nomeação</span>
