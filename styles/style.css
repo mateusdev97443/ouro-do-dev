@@ -583,3 +583,125 @@ pre,
     padding: 1.1rem;
   }
 }
+
+/* Checkpoint 18.2 — Correção forte mobile definitiva */
+@media (max-width: 760px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .sidebar__group {
+    display: block;
+    width: 100%;
+    margin: 1.4rem 0 0.4rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.78rem;
+  }
+
+  .sidebar__nav a {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-height: 44px;
+    align-items: center;
+    padding: 0.75rem 0.85rem;
+    overflow-wrap: anywhere;
+  }
+
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 0.75rem 3rem;
+    overflow-x: hidden;
+  }
+
+  .section-card {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    overflow: hidden;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .principles-grid,
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .info-card,
+  .principle-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  a,
+  span,
+  strong,
+  code {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  h2 {
+    font-size: clamp(1.65rem, 8vw, 2.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+  }
+
+  pre {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 640px;
+  }
+}
