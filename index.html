@@ -47,6 +47,7 @@
           <a href="#portao-final-css">🏁 Portão Final CSS</a>
           <a href="#js-base-zero">⚙️ JS do zero</a>
           <a href="#js-formularios-validacoes">📝 JS Formulários</a>
+          <a href="#js-interacoes-reais">✨ JS Interações</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -3972,6 +3973,193 @@ if (form) {
           <blockquote>
             Formulário com JavaScript aprovado. A validação está clara, o usuário recebe feedback,
             o console está limpo e o projeto está preparado para interações mais completas.
+          </blockquote>
+        </section>
+
+
+
+        <section id="js-interacoes-reais" class="section-card">
+          <span class="eyebrow">JavaScript na prática</span>
+          <h2>✨ JavaScript — Interações Reais da Página</h2>
+
+          <p>
+            Depois de dominar ligação, DOM, eventos e formulários, o JavaScript começa a criar
+            interações reais: abrir menu, voltar ao topo, ativar links, mostrar mensagens,
+            salvar preferências e melhorar a experiência do usuário.
+          </p>
+
+          <blockquote>
+            Interação profissional precisa ter propósito. Ela deve melhorar a navegação,
+            o feedback ou a experiência sem prejudicar acessibilidade e desempenho.
+          </blockquote>
+
+          <h3>🔝 Etapa 1 — Botão voltar ao topo</h3>
+
+          <p>
+            O botão voltar ao topo ajuda em páginas longas. Ele aparece quando o usuário rola a
+            página e leva de volta ao início.
+          </p>
+
+          <pre><code>const backToTopButton = document.querySelector(".back-to-top");
+
+if (backToTopButton) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 700) {
+      backToTopButton.classList.add("is-visible");
+    } else {
+      backToTopButton.classList.remove("is-visible");
+    }
+  });
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}</code></pre>
+
+          <h3>🧭 Etapa 2 — Menu abrir e fechar</h3>
+
+          <p>
+            Em telas menores, menus podem ser recolhidos. O JavaScript pode alternar uma classe
+            para abrir ou fechar a navegação.
+          </p>
+
+          <pre><code>const menuButton = document.querySelector(".menu-button");
+const menu = document.querySelector(".site-nav");
+
+if (menuButton && menu) {
+  menuButton.addEventListener("click", () => {
+    menu.classList.toggle("is-open");
+  });
+}</code></pre>
+
+          <h3>🏷️ Etapa 3 — Trocar classe ativa</h3>
+
+          <p>
+            Classes ativas ajudam a mostrar qual seção, botão ou item está selecionado.
+          </p>
+
+          <pre><code>const navLinks = document.querySelectorAll(".site-nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((item) => item.classList.remove("is-active"));
+    link.classList.add("is-active");
+  });
+});</code></pre>
+
+          <h3>👁️ Etapa 4 — Mostrar e esconder elementos</h3>
+
+          <p>
+            Mostrar e esconder elementos é útil para mensagens, perguntas frequentes, modais simples
+            e detalhes extras.
+          </p>
+
+          <pre><code>const toggleButton = document.querySelector(".toggle-button");
+const panel = document.querySelector(".details-panel");
+
+if (toggleButton && panel) {
+  toggleButton.addEventListener("click", () => {
+    panel.classList.toggle("is-open");
+  });
+}</code></pre>
+
+          <h3>💬 Etapa 5 — Mensagem visual para o usuário</h3>
+
+          <p>
+            Em vez de depender sempre de <code>alert</code>, projetos mais profissionais podem
+            mostrar uma mensagem dentro da página.
+          </p>
+
+          <pre><code>const message = document.querySelector(".form-message");
+
+function showMessage(text) {
+  if (!message) return;
+
+  message.textContent = text;
+  message.classList.add("is-visible");
+}
+
+showMessage("Mensagem enviada com sucesso!");</code></pre>
+
+          <h3>💾 Etapa 6 — Salvar dados simples no localStorage</h3>
+
+          <p>
+            O <code>localStorage</code> permite salvar informações simples no navegador, como
+            checklists marcados, tema escolhido ou preferências do usuário.
+          </p>
+
+          <pre><code>localStorage.setItem("tema", "escuro");
+
+const savedTheme = localStorage.getItem("tema");
+
+console.log(savedTheme);</code></pre>
+
+          <h3>✅ Exemplo — Checklist salvo</h3>
+
+          <pre><code>const checks = document.querySelectorAll(".checklist input");
+
+checks.forEach((input, index) => {
+  const savedValue = localStorage.getItem(`check-${index}`);
+
+  if (savedValue === "true") {
+    input.checked = true;
+  }
+
+  input.addEventListener("change", () => {
+    localStorage.setItem(`check-${index}`, input.checked);
+  });
+});</code></pre>
+
+          <h3>📱 Etapa 7 — Testar interação no celular</h3>
+
+          <p>
+            Interação que funciona com mouse também precisa funcionar com toque. Botões, menus,
+            painéis e formulários precisam ser testados no celular.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Testei clique/toque nos botões</li>
+            <li><input type="checkbox" /> Testei menu no celular</li>
+            <li><input type="checkbox" /> Testei formulário no celular</li>
+            <li><input type="checkbox" /> Testei rolagem e botão voltar ao topo</li>
+            <li><input type="checkbox" /> Testei se localStorage mantém os dados</li>
+            <li><input type="checkbox" /> Console está sem erro crítico</li>
+          </ul>
+
+          <h3>✅ Checklist — Interações reais aprovadas</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Interação tem propósito claro</li>
+            <li><input type="checkbox" /> Código verifica se o elemento existe</li>
+            <li><input type="checkbox" /> Eventos foram testados</li>
+            <li><input type="checkbox" /> Classes são alternadas com <code>classList</code></li>
+            <li><input type="checkbox" /> Feedback ao usuário é claro</li>
+            <li><input type="checkbox" /> Funciona no celular</li>
+            <li><input type="checkbox" /> Funciona no desktop</li>
+            <li><input type="checkbox" /> Console não tem erro crítico</li>
+            <li><input type="checkbox" /> Acessibilidade não foi prejudicada</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos em interações</h3>
+
+          <ul class="feature-list">
+            <li>Criar interação sem necessidade real.</li>
+            <li>Não verificar se o elemento existe.</li>
+            <li>Quebrar navegação por teclado.</li>
+            <li>Criar botão que só funciona com mouse.</li>
+            <li>Ignorar erro no console.</li>
+            <li>Salvar dados sensíveis no localStorage.</li>
+            <li>Usar JavaScript para esconder HTML ou CSS mal feito.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Interações JavaScript aprovadas. O projeto possui comportamento real, feedback claro,
+            funcionamento no celular e desktop, console limpo e experiência preservada.
           </blockquote>
         </section>
 
