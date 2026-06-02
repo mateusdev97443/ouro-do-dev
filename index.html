@@ -37,6 +37,7 @@
           <a href="#html-pronto-css">✅ HTML pronto para CSS</a>
           <a href="#html-estrutura-zero">🧱 HTML do zero</a>
           <a href="#html-conteudo-midia">📝 Conteúdo HTML</a>
+          <a href="#html-tabelas-formularios">📊 Tabelas e Formulários</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -857,6 +858,248 @@ touch scripts/script.js</code></pre>
           <blockquote>
             Conteúdo HTML aprovado. A página possui textos, links, imagens e mídias organizados
             com intenção, acessibilidade e preparo para estilização profissional.
+          </blockquote>
+        </section>
+
+
+
+        <section id="html-tabelas-formularios" class="section-card">
+          <span class="eyebrow">HTML5 na prática</span>
+          <h2>📊 HTML5 — Tabelas e Formulários Profissionais</h2>
+
+          <p>
+            Tabelas e formulários exigem cuidado técnico. Tabela não é ferramenta de layout.
+            Formulário não é apenas input jogado na tela. Ambos precisam de estrutura, clareza,
+            acessibilidade e preparação para CSS.
+          </p>
+
+          <blockquote>
+            Tabela organiza dados. Formulário coleta informações. Os dois precisam ser claros,
+            acessíveis e fáceis de usar.
+          </blockquote>
+
+          <h3>📊 Etapa 1 — Quando usar tabela</h3>
+
+          <p>
+            Tabela deve ser usada quando o conteúdo é realmente tabular: linhas e colunas com dados
+            relacionados. Não uso tabela para montar layout visual.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O conteúdo tem linhas e colunas reais</li>
+            <li><input type="checkbox" /> Os dados precisam ser comparados</li>
+            <li><input type="checkbox" /> Existe cabeçalho para cada coluna</li>
+            <li><input type="checkbox" /> A tabela não está sendo usada para posicionar elementos</li>
+          </ul>
+
+          <h3>🧱 Etapa 2 — Estrutura correta de tabela</h3>
+
+          <pre><code>&lt;div class="table-wrapper"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Mês&lt;/th&gt;
+        &lt;th&gt;Evento&lt;/th&gt;
+        &lt;th&gt;Local&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Janeiro&lt;/td&gt;
+        &lt;td&gt;Abertura da Temporada&lt;/td&gt;
+        &lt;td&gt;Rio Paraná&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+          <p>
+            A classe <code>table-wrapper</code> protege a tabela no celular. Quando a tabela for
+            larga, ela pode rolar horizontalmente sem quebrar a página inteira.
+          </p>
+
+          <h3>✅ Regras profissionais para tabelas</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Elemento</th>
+                  <th>Função</th>
+                  <th>Regra profissional</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>table</code></td>
+                  <td>Estrutura da tabela</td>
+                  <td>Use apenas para dados tabulares.</td>
+                </tr>
+                <tr>
+                  <td><code>thead</code></td>
+                  <td>Cabeçalho da tabela</td>
+                  <td>Use para agrupar os títulos das colunas.</td>
+                </tr>
+                <tr>
+                  <td><code>tbody</code></td>
+                  <td>Corpo da tabela</td>
+                  <td>Use para agrupar os dados principais.</td>
+                </tr>
+                <tr>
+                  <td><code>tr</code></td>
+                  <td>Linha</td>
+                  <td>Cada linha representa um registro.</td>
+                </tr>
+                <tr>
+                  <td><code>th</code></td>
+                  <td>Célula de cabeçalho</td>
+                  <td>Use para nomear colunas ou linhas.</td>
+                </tr>
+                <tr>
+                  <td><code>td</code></td>
+                  <td>Célula de dados</td>
+                  <td>Use para valores comuns da tabela.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>📝 Etapa 3 — Quando usar formulário</h3>
+
+          <p>
+            Formulário é usado quando o usuário precisa enviar informações: nome, email, mensagem,
+            login, cadastro, busca, inscrição ou contato.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Existe uma ação clara para o usuário</li>
+            <li><input type="checkbox" /> Cada campo tem uma finalidade</li>
+            <li><input type="checkbox" /> O formulário não pede informação desnecessária</li>
+            <li><input type="checkbox" /> O botão deixa claro o que vai acontecer</li>
+          </ul>
+
+          <h3>🏗️ Etapa 4 — Estrutura profissional de formulário</h3>
+
+          <pre><code>&lt;form class="form" action="#" method="post"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="nome"&gt;Nome&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="mensagem"&gt;Mensagem&lt;/label&gt;
+    &lt;textarea id="mensagem" name="mensagem" rows="5"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit"&gt;Enviar mensagem&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+          <h3>♿ Etapa 5 — Acessibilidade em formulários</h3>
+
+          <p>
+            O ponto mais importante de formulário profissional é a ligação entre
+            <code>label</code> e campo. O <code>for</code> do label precisa apontar para o
+            <code>id</code> do input.
+          </p>
+
+          <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required /&gt;</code></pre>
+
+          <p>
+            O <code>name</code> identifica o dado enviado. O <code>id</code> conecta o campo ao
+            label. O <code>type</code> ajuda o navegador a entender o tipo de entrada.
+          </p>
+
+          <h3>🧩 Tipos de input mais usados</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Uso</th>
+                  <th>Exemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>text</code></td>
+                  <td>Texto comum</td>
+                  <td>Nome, cidade, assunto</td>
+                </tr>
+                <tr>
+                  <td><code>email</code></td>
+                  <td>Email</td>
+                  <td>Campo de contato</td>
+                </tr>
+                <tr>
+                  <td><code>password</code></td>
+                  <td>Senha</td>
+                  <td>Login e cadastro</td>
+                </tr>
+                <tr>
+                  <td><code>number</code></td>
+                  <td>Número</td>
+                  <td>Idade, quantidade</td>
+                </tr>
+                <tr>
+                  <td><code>date</code></td>
+                  <td>Data</td>
+                  <td>Agendamento</td>
+                </tr>
+                <tr>
+                  <td><code>checkbox</code></td>
+                  <td>Marcação</td>
+                  <td>Aceite, preferências</td>
+                </tr>
+                <tr>
+                  <td><code>radio</code></td>
+                  <td>Escolha única</td>
+                  <td>Opções exclusivas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>✅ Checklist — Tabelas e formulários aprovados</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Tabelas são usadas apenas para dados reais</li>
+            <li><input type="checkbox" /> Tabelas possuem <code>thead</code> e <code>tbody</code></li>
+            <li><input type="checkbox" /> Cabeçalhos usam <code>th</code></li>
+            <li><input type="checkbox" /> Tabelas largas estão dentro de <code>table-wrapper</code></li>
+            <li><input type="checkbox" /> Formulário possui objetivo claro</li>
+            <li><input type="checkbox" /> Cada input possui <code>label</code></li>
+            <li><input type="checkbox" /> Cada <code>label</code> está ligado ao <code>id</code> correto</li>
+            <li><input type="checkbox" /> Campos possuem <code>name</code></li>
+            <li><input type="checkbox" /> Tipos de input foram escolhidos corretamente</li>
+            <li><input type="checkbox" /> Botão tem texto claro</li>
+            <li><input type="checkbox" /> Formulário está preparado para CSS</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos</h3>
+
+          <ul class="feature-list">
+            <li>Usar tabela para montar layout.</li>
+            <li>Esquecer de fechar <code>td</code>, <code>tr</code> ou <code>table</code>.</li>
+            <li>Usar <code>th</code> e <code>td</code> de forma trocada.</li>
+            <li>Criar input sem label.</li>
+            <li>Usar mesmo <code>id</code> em mais de um campo.</li>
+            <li>Colocar placeholder como substituto de label.</li>
+            <li>Usar botão com texto vago como “ok” sem contexto.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Tabelas e formulários aprovados. Os dados estão organizados, os campos estão acessíveis
+            e a estrutura está pronta para estilização profissional.
           </blockquote>
         </section>
 
