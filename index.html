@@ -42,6 +42,7 @@
           <a href="#portao-final-html">🏁 Portão Final HTML</a>
           <a href="#css-base-zero">🎨 CSS do zero</a>
           <a href="#css-layout-profissional">📐 CSS Layout</a>
+          <a href="#css-componentes">🧩 CSS Componentes</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -2329,6 +2330,259 @@ textarea {
           <blockquote>
             Layout CSS aprovado. A página possui largura controlada, espaçamento consistente,
             estrutura visual organizada e está pronta para receber componentes.
+          </blockquote>
+        </section>
+
+
+
+        <section id="css-componentes" class="section-card">
+          <span class="eyebrow">CSS na prática</span>
+          <h2>🧩 CSS Componentes — Header, Hero, Cards, Botões, Tabelas e Formulários</h2>
+
+          <p>
+            Depois da base e do layout, começa a construção dos componentes. Componentes são partes
+            reutilizáveis da interface: cabeçalho, botões, cards, formulários, tabelas, listas,
+            blocos de destaque e rodapé.
+          </p>
+
+          <blockquote>
+            Componente profissional não nasce isolado. Ele respeita o sistema visual, as variáveis,
+            o layout, a responsividade e a acessibilidade.
+          </blockquote>
+
+          <h3>🏛️ Etapa 1 — Header profissional</h3>
+
+          <p>
+            O header orienta o usuário. Ele precisa mostrar identidade, navegação e organização sem
+            poluir a tela.
+          </p>
+
+          <pre><code>.site-header {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}</code></pre>
+
+          <h3>🚀 Etapa 2 — Hero de entrada</h3>
+
+          <p>
+            O hero é a primeira dobra importante da página. Ele precisa explicar rapidamente o
+            objetivo do projeto e guiar o usuário para a ação principal.
+          </p>
+
+          <pre><code>.hero {
+  padding-block: var(--space-xl);
+}
+
+.hero__content {
+  max-width: 760px;
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+}
+
+.hero__text {
+  color: var(--color-muted);
+  font-size: 1.125rem;
+}</code></pre>
+
+          <h3>🔘 Etapa 3 — Botões</h3>
+
+          <p>
+            Botões precisam parecer clicáveis, ter bom contraste, área de toque confortável e texto
+            claro. Botão pequeno demais no celular enfraquece a experiência.
+          </p>
+
+          <pre><code>.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #111827;
+}
+
+.btn--outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}</code></pre>
+
+          <h3>🃏 Etapa 4 — Cards</h3>
+
+          <p>
+            Cards organizam conteúdos relacionados. Eles devem ter espaçamento, borda, fundo e
+            consistência visual.
+          </p>
+
+          <pre><code>.card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: var(--color-muted);
+}</code></pre>
+
+          <h3>📋 Etapa 5 — Listas visuais</h3>
+
+          <p>
+            Listas podem virar blocos mais agradáveis sem perder a estrutura HTML correta.
+          </p>
+
+          <pre><code>.feature-list {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.checklist li {
+  padding: 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}</code></pre>
+
+          <h3>📊 Etapa 6 — Tabelas estilizadas</h3>
+
+          <p>
+            Tabela precisa continuar sendo tabela. O CSS melhora leitura e responsividade, mas não
+            muda o propósito semântico.
+          </p>
+
+          <pre><code>.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}</code></pre>
+
+          <h3>📝 Etapa 7 — Formulários estilizados</h3>
+
+          <p>
+            Formulário profissional precisa ser confortável, legível, acessível e fácil de preencher.
+          </p>
+
+          <pre><code>.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.4rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+}</code></pre>
+
+          <h3>🏁 Etapa 8 — Footer</h3>
+
+          <p>
+            O footer fecha a experiência. Ele pode conter direitos, links finais, contato e
+            informações complementares.
+          </p>
+
+          <pre><code>.site-footer {
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+}</code></pre>
+
+          <h3>✅ Checklist — Componentes aprovados</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Header orienta o usuário</li>
+            <li><input type="checkbox" /> Navegação está clara</li>
+            <li><input type="checkbox" /> Hero comunica o objetivo da página</li>
+            <li><input type="checkbox" /> Botões têm contraste e área de toque confortável</li>
+            <li><input type="checkbox" /> Cards seguem o mesmo padrão visual</li>
+            <li><input type="checkbox" /> Listas visuais continuam legíveis</li>
+            <li><input type="checkbox" /> Tabelas não quebram a tela</li>
+            <li><input type="checkbox" /> Formulários estão confortáveis e acessíveis</li>
+            <li><input type="checkbox" /> Footer fecha a página com clareza</li>
+            <li><input type="checkbox" /> Componentes usam variáveis do sistema visual</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos em componentes</h3>
+
+          <ul class="feature-list">
+            <li>Criar cada botão com um estilo totalmente diferente.</li>
+            <li>Fazer card sem espaçamento interno.</li>
+            <li>Estilizar formulário sem label visível.</li>
+            <li>Deixar botão pequeno demais no celular.</li>
+            <li>Não proteger tabela com wrapper.</li>
+            <li>Usar cores soltas fora das variáveis.</li>
+            <li>Fazer componentes bonitos, mas difíceis de usar.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Componentes CSS aprovados. A interface possui blocos visuais consistentes, reutilizáveis,
+            legíveis, acessíveis e preparados para responsividade.
           </blockquote>
         </section>
 
