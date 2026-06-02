@@ -41,6 +41,7 @@
           <a href="#html-acessibilidade-seo">♿ HTML Acessível e SEO</a>
           <a href="#portao-final-html">🏁 Portão Final HTML</a>
           <a href="#css-base-zero">🎨 CSS do zero</a>
+          <a href="#css-layout-profissional">📐 CSS Layout</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -2143,6 +2144,191 @@ textarea {
           <blockquote>
             Base CSS aprovada. O projeto possui variáveis, reset, base global e acessibilidade
             inicial preparados para iniciar layout e componentes.
+          </blockquote>
+        </section>
+
+
+
+        <section id="css-layout-profissional" class="section-card">
+          <span class="eyebrow">CSS na prática</span>
+          <h2>📐 CSS Layout — Container, Section, Grid e Flex</h2>
+
+          <p>
+            Depois que a base CSS está pronta, começa a construção do layout. Layout é a organização
+            visual da página: largura, espaçamento, alinhamento, colunas, linhas, blocos e respiro.
+          </p>
+
+          <blockquote>
+            Layout profissional não é empurrar elemento com margin aleatória. É organizar a página
+            com sistema, proporção e consistência.
+          </blockquote>
+
+          <h3>📦 Etapa 1 — Criar o container profissional</h3>
+
+          <p>
+            O <code>.container</code> controla a largura do conteúdo. Ele impede que o texto fique
+            grudado nas bordas no celular e largo demais no desktop.
+          </p>
+
+          <pre><code>.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}</code></pre>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O conteúdo tem respiro lateral no celular</li>
+            <li><input type="checkbox" /> O conteúdo não fica largo demais no desktop</li>
+            <li><input type="checkbox" /> O container é reutilizado em várias seções</li>
+            <li><input type="checkbox" /> Não usei largura fixa desnecessária</li>
+          </ul>
+
+          <h3>🧱 Etapa 2 — Criar padrão de seção</h3>
+
+          <p>
+            Seções precisam de espaçamento vertical consistente. Isso evita uma página apertada,
+            cansativa ou sem ritmo visual.
+          </p>
+
+          <pre><code>.section {
+  padding-block: var(--space-xl);
+}
+
+.section__header {
+  max-width: 760px;
+  margin-bottom: var(--space-lg);
+}
+
+.section__title {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.1;
+}</code></pre>
+
+          <h3>📐 Etapa 3 — Usar Grid para estruturas maiores</h3>
+
+          <p>
+            Grid é excelente para cards, galerias, colunas de conteúdo e áreas que precisam de
+            distribuição em linhas e colunas.
+          </p>
+
+          <pre><code>.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}</code></pre>
+
+          <p>
+            Para projetos modernos, uma versão mais flexível pode usar <code>minmax</code>:
+          </p>
+
+          <pre><code>.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}</code></pre>
+
+          <h3>🤝 Etapa 4 — Usar Flex para alinhamentos menores</h3>
+
+          <p>
+            Flex é muito bom para menus, botões, grupos pequenos, alinhamento horizontal e
+            distribuição de elementos em uma linha.
+          </p>
+
+          <pre><code>.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}</code></pre>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ferramenta</th>
+                  <th>Melhor uso</th>
+                  <th>Exemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Grid</td>
+                  <td>Estruturas em linhas e colunas</td>
+                  <td>Cards, galerias, áreas principais</td>
+                </tr>
+                <tr>
+                  <td>Flex</td>
+                  <td>Alinhamentos em uma direção</td>
+                  <td>Menu, botões, grupos pequenos</td>
+                </tr>
+                <tr>
+                  <td>Container</td>
+                  <td>Controle de largura</td>
+                  <td>Conteúdo centralizado e legível</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>📏 Etapa 5 — Usar gap em vez de margin aleatória</h3>
+
+          <p>
+            Em layouts com grid ou flex, o <code>gap</code> cria espaçamento entre os itens de forma
+            limpa e previsível.
+          </p>
+
+          <pre><code>.list {
+  display: grid;
+  gap: 1rem;
+}</code></pre>
+
+          <h3>📱 Etapa 6 — Preparar layout para responsividade</h3>
+
+          <p>
+            Layout profissional já nasce pensando no celular. Se o grid tem muitas colunas no
+            desktop, ele precisa virar uma coluna no mobile.
+          </p>
+
+          <pre><code>@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-block: var(--space-lg);
+  }
+}</code></pre>
+
+          <h3>✅ Checklist — Layout aprovado para componentes</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Existe <code>.container</code> controlando largura</li>
+            <li><input type="checkbox" /> Seções têm espaçamento vertical consistente</li>
+            <li><input type="checkbox" /> Usei <code>grid</code> para estruturas maiores</li>
+            <li><input type="checkbox" /> Usei <code>flex</code> para alinhamentos menores</li>
+            <li><input type="checkbox" /> Usei <code>gap</code> em vez de margens aleatórias</li>
+            <li><input type="checkbox" /> O layout não gruda nas bordas no celular</li>
+            <li><input type="checkbox" /> O conteúdo não fica largo demais no desktop</li>
+            <li><input type="checkbox" /> O layout foi pensado para responsividade</li>
+            <li><input type="checkbox" /> Não usei posicionamento forçado sem necessidade</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos em layout</h3>
+
+          <ul class="feature-list">
+            <li>Usar <code>margin-left</code> grande para “empurrar” elementos.</li>
+            <li>Usar largura fixa que quebra no celular.</li>
+            <li>Deixar texto grudado nas bordas.</li>
+            <li>Não usar container.</li>
+            <li>Usar Grid onde Flex seria mais simples.</li>
+            <li>Usar Flex para uma estrutura que pede Grid.</li>
+            <li>Não testar colunas no mobile.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Layout CSS aprovado. A página possui largura controlada, espaçamento consistente,
+            estrutura visual organizada e está pronta para receber componentes.
           </blockquote>
         </section>
 
