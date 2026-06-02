@@ -46,6 +46,7 @@
           <a href="#css-responsivo-profissional">📱 CSS Responsivo</a>
           <a href="#portao-final-css">🏁 Portão Final CSS</a>
           <a href="#js-base-zero">⚙️ JS do zero</a>
+          <a href="#js-formularios-validacoes">📝 JS Formulários</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -3766,6 +3767,211 @@ if (button && menu) {
           <blockquote>
             Base JavaScript aprovada. O projeto possui script ligado, elementos selecionados com
             segurança, eventos testados e console revisado para avançar para funcionalidades reais.
+          </blockquote>
+        </section>
+
+
+
+        <section id="js-formularios-validacoes" class="section-card">
+          <span class="eyebrow">JavaScript na prática</span>
+          <h2>📝 JavaScript — Formulários e Validações</h2>
+
+          <p>
+            Formulários conectam estrutura, visual e comportamento. O HTML cria os campos, o CSS
+            organiza a experiência e o JavaScript melhora a validação, o feedback e a interação com
+            o usuário.
+          </p>
+
+          <blockquote>
+            Validação profissional não é só bloquear envio. É orientar o usuário com clareza,
+            preservar acessibilidade e evitar erros antes da publicação.
+          </blockquote>
+
+          <h3>🧭 Etapa 1 — Garantir que o formulário HTML está correto</h3>
+
+          <p>
+            Antes do JavaScript, o formulário precisa nascer bem no HTML: com <code>form</code>,
+            <code>label</code>, <code>input</code>, <code>name</code>, <code>id</code>,
+            <code>type</code> e botão claro.
+          </p>
+
+          <pre><code>&lt;form class="contact-form" action="#" method="post"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="nome"&gt;Nome&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required /&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit"&gt;Enviar mensagem&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+          <h3>🎯 Etapa 2 — Capturar o formulário</h3>
+
+          <p>
+            Primeiro eu seleciono o formulário com uma classe clara. Depois verifico se ele existe
+            antes de criar qualquer evento.
+          </p>
+
+          <pre><code>const form = document.querySelector(".contact-form");
+
+if (form) {
+  console.log("Formulário encontrado.");
+}</code></pre>
+
+          <h3>📨 Etapa 3 — Escutar o envio com submit</h3>
+
+          <p>
+            O evento <code>submit</code> acontece quando o usuário tenta enviar o formulário.
+          </p>
+
+          <pre><code>const form = document.querySelector(".contact-form");
+
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    console.log("Formulário enviado.");
+  });
+}</code></pre>
+
+          <h3>⛔ Etapa 4 — Usar preventDefault com intenção</h3>
+
+          <p>
+            O <code>preventDefault()</code> impede o comportamento padrão do navegador. Em estudos
+            e projetos sem back-end, ele evita que a página recarregue antes da validação.
+          </p>
+
+          <pre><code>event.preventDefault();</code></pre>
+
+          <h3>📥 Etapa 5 — Ler valores dos campos</h3>
+
+          <p>
+            Depois de capturar o formulário, eu leio os campos pelo <code>id</code> ou por seletores
+            internos.
+          </p>
+
+          <pre><code>const nameInput = form.querySelector("#nome");
+const emailInput = form.querySelector("#email");
+
+const nameValue = nameInput.value.trim();
+const emailValue = emailInput.value.trim();</code></pre>
+
+          <h3>✅ Etapa 6 — Validar campos vazios</h3>
+
+          <p>
+            Mesmo usando <code>required</code> no HTML, o JavaScript pode melhorar o feedback e
+            organizar a lógica.
+          </p>
+
+          <pre><code>if (nameValue === "") {
+  alert("Digite seu nome.");
+  return;
+}</code></pre>
+
+          <h3>📧 Etapa 7 — Validar email simples</h3>
+
+          <p>
+            Uma validação inicial de email pode verificar se existe <code>@</code> e ponto. Para
+            projetos maiores, posso usar regras mais completas.
+          </p>
+
+          <pre><code>if (!emailValue.includes("@") || !emailValue.includes(".")) {
+  alert("Digite um email válido.");
+  return;
+}</code></pre>
+
+          <h3>💬 Etapa 8 — Mostrar mensagem para o usuário</h3>
+
+          <p>
+            O usuário precisa entender o que aconteceu. Em projetos simples, posso usar
+            <code>alert</code>. Em projetos mais profissionais, posso exibir uma mensagem dentro da
+            página.
+          </p>
+
+          <pre><code>alert("Mensagem enviada com sucesso!");</code></pre>
+
+          <h3>🧩 Exemplo completo de validação simples</h3>
+
+          <pre><code>const form = document.querySelector(".contact-form");
+
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameInput = form.querySelector("#nome");
+    const emailInput = form.querySelector("#email");
+
+    const nameValue = nameInput.value.trim();
+    const emailValue = emailInput.value.trim();
+
+    if (nameValue === "") {
+      alert("Digite seu nome.");
+      return;
+    }
+
+    if (!emailValue.includes("@") || !emailValue.includes(".")) {
+      alert("Digite um email válido.");
+      return;
+    }
+
+    alert("Mensagem enviada com sucesso!");
+    form.reset();
+  });
+}</code></pre>
+
+          <h3>♿ Etapa 9 — Preservar acessibilidade</h3>
+
+          <p>
+            Validação precisa ajudar, não atrapalhar. Mensagens devem ser claras, campos precisam
+            manter labels e o usuário deve entender o erro.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O formulário tem labels visíveis</li>
+            <li><input type="checkbox" /> Os campos têm tipos corretos</li>
+            <li><input type="checkbox" /> A mensagem de erro é clara</li>
+            <li><input type="checkbox" /> O usuário entende como corrigir</li>
+            <li><input type="checkbox" /> O formulário continua usável no celular</li>
+          </ul>
+
+          <h3>✅ Checklist — Formulário JS aprovado</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O formulário foi selecionado com segurança</li>
+            <li><input type="checkbox" /> O evento <code>submit</code> foi criado</li>
+            <li><input type="checkbox" /> Usei <code>preventDefault()</code> com intenção</li>
+            <li><input type="checkbox" /> Li os valores dos campos corretamente</li>
+            <li><input type="checkbox" /> Usei <code>trim()</code> para limpar espaços</li>
+            <li><input type="checkbox" /> Validei campo vazio</li>
+            <li><input type="checkbox" /> Validei email básico</li>
+            <li><input type="checkbox" /> Mostrei mensagem clara para o usuário</li>
+            <li><input type="checkbox" /> Testei envio com campos vazios</li>
+            <li><input type="checkbox" /> Testei envio com email inválido</li>
+            <li><input type="checkbox" /> Testei envio correto</li>
+            <li><input type="checkbox" /> Console está sem erro crítico</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos em validações</h3>
+
+          <ul class="feature-list">
+            <li>Validar formulário sem label nos campos.</li>
+            <li>Não testar campo vazio.</li>
+            <li>Não testar email inválido.</li>
+            <li>Deixar erro vermelho no console.</li>
+            <li>Mostrar mensagem confusa para o usuário.</li>
+            <li>Usar JavaScript sem entender o fluxo do submit.</li>
+            <li>Apagar dados do formulário antes de validar.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Formulário com JavaScript aprovado. A validação está clara, o usuário recebe feedback,
+            o console está limpo e o projeto está preparado para interações mais completas.
           </blockquote>
         </section>
 
