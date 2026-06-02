@@ -40,6 +40,7 @@
           <a href="#html-tabelas-formularios">📊 Tabelas e Formulários</a>
           <a href="#html-acessibilidade-seo">♿ HTML Acessível e SEO</a>
           <a href="#portao-final-html">🏁 Portão Final HTML</a>
+          <a href="#css-base-zero">🎨 CSS do zero</a>
           <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
@@ -1971,6 +1972,179 @@ touch scripts/script.js</code></pre>
           </div>
         </section>
 
+
+
+
+        <section id="css-base-zero" class="section-card">
+          <span class="eyebrow">CSS na prática</span>
+          <h2>🎨 CSS do Zero — Ligação, Variáveis, Reset e Base Global</h2>
+
+          <p>
+            Depois que o HTML foi aprovado, o CSS começa. A primeira missão não é sair colocando
+            cor em tudo. A primeira missão é criar uma base visual organizada, previsível e
+            preparada para crescer.
+          </p>
+
+          <blockquote>
+            CSS profissional começa com sistema. Primeiro eu preparo a base, depois construo o layout.
+          </blockquote>
+
+          <h3>🔗 Etapa 1 — Ligar o CSS no HTML</h3>
+
+          <p>
+            O arquivo CSS deve ser conectado dentro do <code>head</code> do HTML. Sem essa ligação,
+            o navegador não aplica os estilos.
+          </p>
+
+          <pre><code>&lt;link rel="stylesheet" href="styles/style.css" /&gt;</code></pre>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Existe uma pasta <code>styles</code></li>
+            <li><input type="checkbox" /> Existe um arquivo <code>style.css</code></li>
+            <li><input type="checkbox" /> O caminho no <code>href</code> está correto</li>
+            <li><input type="checkbox" /> O CSS carrega no navegador</li>
+          </ul>
+
+          <h3>📁 Etapa 2 — Organizar o arquivo CSS</h3>
+
+          <p>
+            O arquivo CSS precisa ter ordem. Isso facilita manutenção, evita repetição e mostra
+            maturidade técnica.
+          </p>
+
+          <pre><code>/* 1. Tokens / variáveis */
+/* 2. Reset */
+/* 3. Base global */
+/* 4. Acessibilidade */
+/* 5. Layout */
+/* 6. Componentes */
+/* 7. Responsividade */</code></pre>
+
+          <h3>🎛️ Etapa 3 — Criar variáveis no :root</h3>
+
+          <p>
+            Variáveis guardam decisões importantes do projeto. Em vez de repetir cores e tamanhos
+            em vários lugares, eu centralizo tudo no começo do CSS.
+          </p>
+
+          <pre><code>:root {
+  --color-bg: #050816;
+  --color-surface: #111827;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-primary: #facc15;
+  --color-border: rgba(148, 163, 184, 0.22);
+
+  --font-main: system-ui, sans-serif;
+  --container: 1180px;
+
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+}</code></pre>
+
+          <h3>🧹 Etapa 4 — Aplicar reset básico</h3>
+
+          <p>
+            O reset cria previsibilidade. Ele reduz diferenças entre navegadores e evita surpresas
+            de espaçamento e tamanho.
+          </p>
+
+          <pre><code>*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}</code></pre>
+
+          <h3>🌍 Etapa 5 — Criar base global</h3>
+
+          <p>
+            A base global define a aparência inicial da página: fonte, cor, fundo, altura de linha,
+            links e comportamento geral.
+          </p>
+
+          <pre><code>html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}</code></pre>
+
+          <h3>♿ Etapa 6 — Preservar foco visível</h3>
+
+          <p>
+            Nunca remova o foco sem colocar outro no lugar. O foco visível ajuda quem navega por
+            teclado e melhora a acessibilidade.
+          </p>
+
+          <pre><code>:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}</code></pre>
+
+          <h3>✅ Checklist — Base CSS aprovada</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O CSS está ligado corretamente no HTML</li>
+            <li><input type="checkbox" /> O arquivo CSS tem ordem inicial clara</li>
+            <li><input type="checkbox" /> Variáveis principais foram criadas no <code>:root</code></li>
+            <li><input type="checkbox" /> Reset básico foi aplicado</li>
+            <li><input type="checkbox" /> <code>box-sizing: border-box</code> está ativo</li>
+            <li><input type="checkbox" /> Imagens, vídeos e iframes não estouram a tela</li>
+            <li><input type="checkbox" /> Fonte global foi definida</li>
+            <li><input type="checkbox" /> Cores globais foram definidas</li>
+            <li><input type="checkbox" /> Foco visível foi preservado</li>
+            <li><input type="checkbox" /> A página já tem uma base previsível para layout</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos nessa fase</h3>
+
+          <ul class="feature-list">
+            <li>Começar estilizando componentes sem criar base.</li>
+            <li>Repetir cores em vários lugares sem variável.</li>
+            <li>Esquecer de ligar o CSS no HTML.</li>
+            <li>Apagar o foco visível sem substituto.</li>
+            <li>Ignorar <code>box-sizing</code>.</li>
+            <li>Deixar imagens sem <code>max-width: 100%</code>.</li>
+            <li>Escrever CSS sem ordem.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Base CSS aprovada. O projeto possui variáveis, reset, base global e acessibilidade
+            inicial preparados para iniciar layout e componentes.
+          </blockquote>
+        </section>
 
 
         <section id="css-pronto-js" class="section-card">
