@@ -54,6 +54,7 @@
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
           <a href="#github-readme-profissional">🧬 GitHub e README</a>
           <a href="#portfolio-recrutadores">💼 Portfólio e Recrutadores</a>
+          <a href="#inspecao-total">🔍 Inspeção Total</a>
 
           <span class="sidebar__group">FUNDAMENTOS</span>
           <a href="#html">🧱 HTML Semântico</a>
@@ -3546,6 +3547,241 @@ iframe {
             </article>
           </div>
         </section>
+
+
+        <section id="inspecao-total" class="section-card">
+          <span class="eyebrow">Validação profissional</span>
+          <h2>🔍 Ferramentas de Inspeção Total</h2>
+
+          <p>
+            Um projeto profissional não é aprovado apenas porque abriu no navegador. Ele precisa ser
+            inspecionado com olhar humano e ferramentas técnicas. Essa etapa encontra problemas de
+            HTML, CSS, JavaScript, acessibilidade, responsividade, performance e apresentação.
+          </p>
+
+          <blockquote>
+            Ferramenta não substitui o desenvolvedor. Ferramenta revela problemas. O profissional
+            interpreta, corrige e valida com critério.
+          </blockquote>
+
+          <h3>🧭 Etapa 1 — Inspeção visual humana</h3>
+
+          <p>
+            Antes das ferramentas, eu observo a experiência. O projeto precisa fazer sentido para
+            quem usa: leitura confortável, blocos organizados, botões claros e navegação simples.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O topo da página está claro</li>
+            <li><input type="checkbox" /> O objetivo do projeto é entendido rápido</li>
+            <li><input type="checkbox" /> As seções estão em ordem lógica</li>
+            <li><input type="checkbox" /> O texto está confortável para ler</li>
+            <li><input type="checkbox" /> Botões e links são fáceis de encontrar</li>
+            <li><input type="checkbox" /> A página não parece quebrada ou improvisada</li>
+          </ul>
+
+          <h3>🛠️ Etapa 2 — DevTools</h3>
+
+          <p>
+            O DevTools é a ferramenta principal do navegador. Com ele, eu inspeciono HTML, CSS,
+            box model, responsividade, console, rede, performance e acessibilidade inicial.
+          </p>
+
+          <div class="timeline">
+            <div>
+              <strong>1. Elements</strong>
+              <span>Inspecionar HTML, classes, tags, estrutura e CSS aplicado.</span>
+            </div>
+
+            <div>
+              <strong>2. Styles</strong>
+              <span>Ver quais regras estão funcionando e quais foram sobrescritas.</span>
+            </div>
+
+            <div>
+              <strong>3. Box Model</strong>
+              <span>Conferir margin, padding, border, largura e altura real.</span>
+            </div>
+
+            <div>
+              <strong>4. Console</strong>
+              <span>Verificar erros de JavaScript e mensagens importantes.</span>
+            </div>
+
+            <div>
+              <strong>5. Device Toolbar</strong>
+              <span>Testar celular, tablet e diferentes larguras.</span>
+            </div>
+          </div>
+
+          <h3>📱 Etapa 3 — Teste responsivo obrigatório</h3>
+
+          <p>
+            Responsividade precisa ser testada em mais de um tamanho. Um projeto que só funciona na
+            tela onde foi criado ainda não está pronto.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Largura</th>
+                  <th>Tipo</th>
+                  <th>O que verificar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>320px</td>
+                  <td>Celular pequeno</td>
+                  <td>Sem corte lateral, sem texto esmagado, botões tocáveis.</td>
+                </tr>
+                <tr>
+                  <td>375px</td>
+                  <td>Celular comum</td>
+                  <td>Leitura confortável e menu usável.</td>
+                </tr>
+                <tr>
+                  <td>425px</td>
+                  <td>Celular grande</td>
+                  <td>Cards, hero, formulário e imagens proporcionais.</td>
+                </tr>
+                <tr>
+                  <td>768px</td>
+                  <td>Tablet</td>
+                  <td>Grid, espaçamento e navegação intermediária.</td>
+                </tr>
+                <tr>
+                  <td>1366px</td>
+                  <td>Notebook</td>
+                  <td>Conteúdo com largura controlada e boa presença visual.</td>
+                </tr>
+                <tr>
+                  <td>1920px</td>
+                  <td>Desktop grande</td>
+                  <td>Layout sem espalhar demais e sem perder foco.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>🧪 Etapa 4 — Lighthouse</h3>
+
+          <p>
+            O Lighthouse audita performance, acessibilidade, boas práticas e SEO. Ele não decide
+            tudo sozinho, mas aponta problemas importantes.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Rodei Lighthouse no modo Mobile</li>
+            <li><input type="checkbox" /> Rodei Lighthouse no modo Desktop</li>
+            <li><input type="checkbox" /> Analisei Performance</li>
+            <li><input type="checkbox" /> Analisei Accessibility</li>
+            <li><input type="checkbox" /> Analisei Best Practices</li>
+            <li><input type="checkbox" /> Analisei SEO</li>
+            <li><input type="checkbox" /> Corrigi alertas importantes</li>
+          </ul>
+
+          <h3>🧾 Etapa 5 — Validação HTML</h3>
+
+          <p>
+            O HTML precisa ser validado para encontrar tags mal fechadas, atributos errados, IDs
+            duplicados e problemas estruturais.
+          </p>
+
+          <pre><code># Quando estiver usando terminal com Node disponível:
+npx htmlhint "*.html"</code></pre>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Conferi tags abertas e fechadas</li>
+            <li><input type="checkbox" /> Conferi IDs duplicados</li>
+            <li><input type="checkbox" /> Conferi alt em imagens importantes</li>
+            <li><input type="checkbox" /> Conferi labels em formulários</li>
+            <li><input type="checkbox" /> Conferi title em iframes</li>
+          </ul>
+
+          <h3>🎨 Etapa 6 — Validação CSS</h3>
+
+          <p>
+            O CSS precisa ser revisado para encontrar propriedades inválidas, seletores inúteis,
+            repetições e regras que causam quebra visual.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> CSS está ligado corretamente</li>
+            <li><input type="checkbox" /> Não existem regras duplicadas sem necessidade</li>
+            <li><input type="checkbox" /> Variáveis estão sendo usadas</li>
+            <li><input type="checkbox" /> Media queries foram testadas</li>
+            <li><input type="checkbox" /> Não existe rolagem horizontal indevida</li>
+          </ul>
+
+          <h3>♿ Etapa 7 — Acessibilidade</h3>
+
+          <p>
+            Acessibilidade precisa ser validada no HTML, CSS e JavaScript. O projeto deve funcionar
+            para o máximo possível de pessoas.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Imagens informativas possuem alt</li>
+            <li><input type="checkbox" /> Formulários possuem labels</li>
+            <li><input type="checkbox" /> Foco visível está preservado</li>
+            <li><input type="checkbox" /> Contraste está legível</li>
+            <li><input type="checkbox" /> Botões têm texto claro</li>
+            <li><input type="checkbox" /> Links têm contexto</li>
+            <li><input type="checkbox" /> Interações JS não prejudicam teclado ou toque</li>
+          </ul>
+
+          <h3>⚙️ Etapa 8 — Console JavaScript</h3>
+
+          <p>
+            Antes de publicar, eu abro o console e testo todas as interações. Erro vermelho crítico
+            bloqueia publicação.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Console abre sem erro crítico</li>
+            <li><input type="checkbox" /> Botões foram testados</li>
+            <li><input type="checkbox" /> Formulários foram testados</li>
+            <li><input type="checkbox" /> Menu/interações foram testados</li>
+            <li><input type="checkbox" /> localStorage, se usado, funciona corretamente</li>
+          </ul>
+
+          <h3>✅ Checklist final — Inspeção Total aprovada</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Inspeção visual feita</li>
+            <li><input type="checkbox" /> DevTools usado</li>
+            <li><input type="checkbox" /> Responsivo testado</li>
+            <li><input type="checkbox" /> HTML revisado</li>
+            <li><input type="checkbox" /> CSS revisado</li>
+            <li><input type="checkbox" /> Acessibilidade revisada</li>
+            <li><input type="checkbox" /> Console revisado</li>
+            <li><input type="checkbox" /> Lighthouse analisado quando possível</li>
+            <li><input type="checkbox" /> README atualizado</li>
+            <li><input type="checkbox" /> Link publicado testado</li>
+          </ul>
+
+          <h3>⚠️ Erros proibidos na inspeção</h3>
+
+          <ul class="feature-list">
+            <li>Aprovar projeto só porque abriu no navegador.</li>
+            <li>Não testar celular.</li>
+            <li>Ignorar erro vermelho no console.</li>
+            <li>Não revisar formulário.</li>
+            <li>Não testar link publicado.</li>
+            <li>Não atualizar README após mudança importante.</li>
+            <li>Ignorar rolagem horizontal indevida.</li>
+          </ul>
+
+          <h3>🏁 Declaração de aprovação</h3>
+
+          <blockquote>
+            Inspeção Total aprovada. O projeto foi revisado com olhar humano, DevTools, testes
+            responsivos, validação técnica, acessibilidade, console e link final.
+          </blockquote>
+        </section>
+
 
         <section id="ferramentas" class="section-card">
           <span class="eyebrow">Inspeção total</span>
