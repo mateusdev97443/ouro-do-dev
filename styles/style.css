@@ -681,3 +681,60 @@ td {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   CHECKPOINT 44 — MENU RECOLHÍVEL POR GRUPOS
+   ========================================================= */
+
+.manual-menu-enhanced {
+  --menu-accent: #facc15;
+}
+
+.manual-menu-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.6rem;
+  padding: 0.75rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.24);
+  background: transparent;
+  color: var(--menu-accent);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.manual-menu-toggle::after {
+  content: "＋";
+  flex: 0 0 auto;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.manual-menu-toggle.is-open::after {
+  content: "−";
+}
+
+.manual-menu-item-hidden {
+  display: none !important;
+}
+
+.manual-menu-toggle:focus-visible {
+  outline: 3px solid var(--menu-accent);
+  outline-offset: 4px;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .manual-menu-toggle {
+    margin-top: 1rem;
+    padding-block: 0.85rem;
+  }
+}
