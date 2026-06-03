@@ -61,6 +61,7 @@
           <a href="#escolher-estrutura">🧭 Escolher Estrutura</a>
           <a href="#estruturas-copiaveis">📋 Estruturas Copiáveis</a>
           <a href="#componentes-prontos">🧰 Componentes Prontos</a>
+          <a href="#laboratorio-erros">🧪 Laboratório de Erros</a>
 
           <span class="sidebar__group">FUNDAMENTOS</span>
           <a href="#html">🧱 HTML Semântico</a>
@@ -7111,6 +7112,258 @@ Repositório: [cole o link]</code></pre>
           <blockquote>
             Componente escolhido e adaptado. Agora eu uso esse bloco como peça profissional dentro
             do projeto, respeitando semântica, acessibilidade, responsividade e validação.
+          </blockquote>
+        </section>
+
+
+
+        <section id="laboratorio-erros" class="section-card">
+          <span class="eyebrow">Diagnóstico profissional</span>
+          <h2>🧪 Laboratório de Erros Comuns</h2>
+
+          <p>
+            Esta seção existe para quando algo der errado. Um desenvolvedor profissional não entra em
+            desespero: ele diagnostica, isola o problema, testa hipóteses e corrige com método.
+          </p>
+
+          <blockquote>
+            Erro não é derrota. Erro é sinal. O profissional aprende a ler o sinal, encontrar a causa
+            e corrigir sem quebrar o resto do projeto.
+          </blockquote>
+
+          <h3>🚨 Regra principal ao encontrar erro</h3>
+
+          <ol class="ordered-list">
+            <li>Não sair mexendo em tudo ao mesmo tempo.</li>
+            <li>Identificar exatamente onde o erro aparece.</li>
+            <li>Verificar HTML, CSS, JavaScript e console separadamente.</li>
+            <li>Fazer uma correção pequena.</li>
+            <li>Testar novamente.</li>
+            <li>Só depois commitar.</li>
+          </ol>
+
+          <h3>🎨 Erro 1 — CSS não carregou</h3>
+
+          <p>
+            Quando a página aparece sem estilo, quase sempre o problema está no caminho do arquivo,
+            nome da pasta, nome do arquivo ou link no <code>head</code>.
+          </p>
+
+          <pre><code>&lt;link rel="stylesheet" href="styles/style.css" /&gt;</code></pre>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> A pasta se chama exatamente <code>styles</code></li>
+            <li><input type="checkbox" /> O arquivo se chama exatamente <code>style.css</code></li>
+            <li><input type="checkbox" /> O caminho no <code>href</code> está correto</li>
+            <li><input type="checkbox" /> O arquivo foi salvo</li>
+            <li><input type="checkbox" /> O navegador foi recarregado</li>
+          </ul>
+
+          <h3>🖼️ Erro 2 — Imagem não aparece</h3>
+
+          <p>
+            Se a imagem não aparece, confira caminho, nome do arquivo, extensão e letras maiúsculas.
+          </p>
+
+          <pre><code>&lt;img src="assets/imagens/foto.jpg" alt="Descrição da imagem" /&gt;</code></pre>
+
+          <ul class="feature-list">
+            <li>Verificar se a imagem está na pasta certa.</li>
+            <li>Conferir se é <code>.jpg</code>, <code>.png</code>, <code>.webp</code> ou outro formato.</li>
+            <li>Conferir maiúsculas e minúsculas.</li>
+            <li>Evitar espaço no nome do arquivo.</li>
+          </ul>
+
+          <h3>📱 Erro 3 — Conteúdo estourando no celular</h3>
+
+          <p>
+            Se a página cria rolagem lateral, algum elemento está maior que a tela.
+          </p>
+
+          <pre><code>img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+pre,
+.table-wrapper {
+  overflow-x: auto;
+}</code></pre>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Imagens têm <code>max-width: 100%</code></li>
+            <li><input type="checkbox" /> Tabelas estão dentro de <code>table-wrapper</code></li>
+            <li><input type="checkbox" /> Não usei largura fixa grande</li>
+            <li><input type="checkbox" /> Grids viram uma coluna no mobile</li>
+            <li><input type="checkbox" /> Títulos longos não cortam na lateral</li>
+          </ul>
+
+          <h3>📊 Erro 4 — Tabela quebrando o layout</h3>
+
+          <p>
+            Tabelas largas precisam rolar dentro de um wrapper. A tabela pode ser larga; a página não.
+          </p>
+
+          <pre><code>&lt;div class="table-wrapper"&gt;
+  &lt;table&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+          <pre><code>.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  min-width: 640px;
+}</code></pre>
+
+          <h3>📝 Erro 5 — Formulário amador</h3>
+
+          <p>
+            Formulário fraco costuma ter input sem label, placeholder usado como label, botão vago ou
+            campos sem <code>name</code>.
+          </p>
+
+          <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required /&gt;</code></pre>
+
+          <ul class="feature-list">
+            <li>Todo campo importante precisa de label.</li>
+            <li><code>for</code> do label precisa bater com <code>id</code> do input.</li>
+            <li><code>name</code> identifica o dado enviado.</li>
+            <li>Placeholder não substitui label.</li>
+          </ul>
+
+          <h3>⚙️ Erro 6 — JavaScript não funciona</h3>
+
+          <p>
+            Quando o JavaScript não funciona, o primeiro lugar para olhar é o console.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> O arquivo <code>script.js</code> existe</li>
+            <li><input type="checkbox" /> O caminho no <code>src</code> está correto</li>
+            <li><input type="checkbox" /> O script está no final do <code>body</code></li>
+            <li><input type="checkbox" /> O seletor usado no JS existe no HTML</li>
+            <li><input type="checkbox" /> O console foi aberto e revisado</li>
+          </ul>
+
+          <pre><code>const button = document.querySelector(".menu-button");
+
+if (button) {
+  button.addEventListener("click", () => {
+    console.log("Funcionou!");
+  });
+}</code></pre>
+
+          <h3>🔴 Erro 7 — Console com erro vermelho</h3>
+
+          <p>
+            Erro vermelho no console precisa ser lido. Ele normalmente informa arquivo, linha e tipo
+            do problema.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Erro comum</th>
+                  <th>Possível causa</th>
+                  <th>Caminho de correção</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>Cannot read properties of null</code></td>
+                  <td>Elemento não encontrado</td>
+                  <td>Conferir seletor e usar <code>if (elemento)</code></td>
+                </tr>
+                <tr>
+                  <td><code>Unexpected token</code></td>
+                  <td>Sintaxe quebrada</td>
+                  <td>Conferir parênteses, chaves e vírgulas</td>
+                </tr>
+                <tr>
+                  <td><code>404</code></td>
+                  <td>Arquivo não encontrado</td>
+                  <td>Conferir caminho do CSS, JS ou imagem</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>🌐 Erro 8 — GitHub Pages não atualizou</h3>
+
+          <p>
+            O GitHub Pages pode demorar alguns minutos. Mas também pode ser cache, commit não enviado
+            ou arquivo não salvo.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Rodei <code>git status</code></li>
+            <li><input type="checkbox" /> Fiz commit das alterações</li>
+            <li><input type="checkbox" /> Rodei <code>git push</code></li>
+            <li><input type="checkbox" /> Aguardei alguns minutos</li>
+            <li><input type="checkbox" /> Recarreguei a página</li>
+            <li><input type="checkbox" /> Testei em aba anônima, se necessário</li>
+          </ul>
+
+          <h3>🧬 Erro 9 — Git push falhou</h3>
+
+          <p>
+            Quando o push falha, eu leio a mensagem. Pode ser internet, autenticação, conflito ou
+            repositório remoto incorreto.
+          </p>
+
+          <pre><code>git status
+git remote -v
+git pull
+git push</code></pre>
+
+          <ul class="feature-list">
+            <li>Se aparecer erro de internet, tentar novamente depois.</li>
+            <li>Se aparecer conflito, não forçar sem entender.</li>
+            <li>Se pedir login/token, revisar autenticação do GitHub.</li>
+            <li>Se o remoto estiver errado, conferir <code>git remote -v</code>.</li>
+          </ul>
+
+          <h3>📄 Erro 10 — README fraco</h3>
+
+          <p>
+            README fraco passa impressão de projeto incompleto. Mesmo projeto simples precisa de
+            apresentação clara.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> README tem nome do projeto</li>
+            <li><input type="checkbox" /> README explica objetivo</li>
+            <li><input type="checkbox" /> README lista tecnologias</li>
+            <li><input type="checkbox" /> README mostra funcionalidades</li>
+            <li><input type="checkbox" /> README tem link publicado</li>
+            <li><input type="checkbox" /> README tem aprendizados</li>
+          </ul>
+
+          <h3>🏁 Checklist final de diagnóstico</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Identifiquei o erro com clareza</li>
+            <li><input type="checkbox" /> Conferi HTML</li>
+            <li><input type="checkbox" /> Conferi CSS</li>
+            <li><input type="checkbox" /> Conferi JavaScript</li>
+            <li><input type="checkbox" /> Conferi console</li>
+            <li><input type="checkbox" /> Fiz correção pequena</li>
+            <li><input type="checkbox" /> Testei novamente</li>
+            <li><input type="checkbox" /> Só commitei depois de corrigir</li>
+          </ul>
+
+          <h3>🏁 Declaração de correção</h3>
+
+          <blockquote>
+            Erro diagnosticado e corrigido com método. Eu não mexi em tudo ao mesmo tempo: identifiquei
+            a causa, corrigi com segurança, testei e preservei o projeto.
           </blockquote>
         </section>
 
