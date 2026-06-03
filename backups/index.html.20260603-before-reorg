@@ -26,61 +26,56 @@
 
 
         <nav class="sidebar__nav" aria-label="Navegação do manual">
-          <span class="sidebar__group">Início / Orientação</span>
-          <a href="#visao-geral">🚀 Visão geral</a>
-          <a href="#mapa-manual">🧭 Mapa do manual</a>
+          <span class="sidebar__group">INÍCIO</span>
+          <a href="#visao-geral">🚀 Visão Geral</a>
           <a href="#manifesto">🧠 Manifesto</a>
-          <a href="#como-usar-manual">📌 Como usar</a>
-          <a href="#trilha">📚 Trilha de estudos</a>
-          <a href="#fluxo">🗺️ Fluxo de projeto</a>
-          <a href="#construcao-profissional">🏗️ Construção profissional</a>
+          <a href="#como-usar-manual">🧭 Como usar o manual</a>
+          <a href="#trilha">📚 Trilha de Estudos</a>
 
-          <span class="sidebar__group">HTML</span>
+          <span class="sidebar__group">CONSTRUÇÃO PROFISSIONAL</span>
+          <a href="#fluxo">🗺️ Fluxo de Projeto</a>
+          <a href="#construcao-profissional">🏗️ Construção Profissional</a>
+          <a href="#html-pronto-css">✅ HTML pronto para CSS</a>
           <a href="#html-estrutura-zero">🧱 HTML do zero</a>
           <a href="#html-conteudo-midia">📝 Conteúdo HTML</a>
-          <a href="#html-tabelas-formularios">📊 Tabelas e formulários</a>
-          <a href="#html-acessibilidade-seo">♿ Acessibilidade e SEO</a>
-          <a href="#portao-final-html">🏁 Portão final HTML</a>
-          <a href="#html-pronto-css">✅ HTML pronto para CSS</a>
-          <a href="#html">🧱 HTML semântico</a>
-          <a href="#classes">🏷️ Classes estratégicas</a>
-
-          <span class="sidebar__group">CSS</span>
+          <a href="#html-tabelas-formularios">📊 Tabelas e Formulários</a>
+          <a href="#html-acessibilidade-seo">♿ HTML Acessível e SEO</a>
+          <a href="#portao-final-html">🏁 Portão Final HTML</a>
           <a href="#css-base-zero">🎨 CSS do zero</a>
-          <a href="#css-layout-profissional">📐 CSS layout</a>
-          <a href="#css-componentes">🧩 CSS componentes</a>
-          <a href="#css-responsivo-profissional">📱 CSS responsivo</a>
-          <a href="#portao-final-css">🏁 Portão final CSS</a>
-          <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
-          <a href="#css">🎨 CSS ME Standard</a>
-          <a href="#layout">📐 Sistema de layout</a>
-          <a href="#responsivo">📱 Responsividade</a>
-
-          <span class="sidebar__group">JavaScript</span>
+          <a href="#css-layout-profissional">📐 CSS Layout</a>
+          <a href="#css-componentes">🧩 CSS Componentes</a>
+          <a href="#css-responsivo-profissional">📱 CSS Responsivo</a>
+          <a href="#portao-final-css">🏁 Portão Final CSS</a>
           <a href="#js-base-zero">⚙️ JS do zero</a>
-          <a href="#js-formularios-validacoes">📝 JS formulários</a>
-          <a href="#js-interacoes-reais">✨ JS interações</a>
-          <a href="#portao-final-js">🏁 Portão final JS</a>
+          <a href="#js-formularios-validacoes">📝 JS Formulários</a>
+          <a href="#js-interacoes-reais">✨ JS Interações</a>
+          <a href="#portao-final-js">🏁 Portão Final JS</a>
+          <a href="#css-pronto-js">🎨 CSS pronto para JS</a>
           <a href="#js-pronto-publicacao">⚙️ JS pronto para publicação</a>
-
-          <span class="sidebar__group">Ferramentas</span>
-          <a href="#inspecao-total">🔍 Inspeção total</a>
-          <a href="#ferramentas">🛠️ Ferramentas obrigatórias</a>
-          <a href="#checklists">✅ Checklists</a>
-          <a href="#laboratorio-erros">🧪 Laboratório de erros</a>
-          <a href="#acessibilidade">♿ Acessibilidade obrigatória</a>
-
-          <span class="sidebar__group">Carreira</span>
           <a href="#projeto-pronto-carreira">🌐 Projeto pronto</a>
           <a href="#github-readme-profissional">🧬 GitHub e README</a>
-          <a href="#github">🧬 GitHub e portfólio</a>
-          <a href="#portfolio-recrutadores">💼 Portfólio e recrutadores</a>
-          <a href="#recrutadores">💼 Visão dos recrutadores</a>
-          <a href="#projetos-praticos">🧪 Projetos práticos</a>
-          <a href="#biblioteca-estruturas">🧱 Biblioteca de estruturas</a>
-          <a href="#escolher-estrutura">🧭 Escolher estrutura</a>
-          <a href="#estruturas-copiaveis">📋 Estruturas copiáveis</a>
-          <a href="#componentes-prontos">🧰 Componentes prontos</a>
+          <a href="#portfolio-recrutadores">💼 Portfólio e Recrutadores</a>
+          <a href="#inspecao-total">🔍 Inspeção Total</a>
+          <a href="#projetos-praticos">🧪 Projetos Práticos</a>
+          <a href="#biblioteca-estruturas">🧱 Estruturas de Projetos</a>
+          <a href="#escolher-estrutura">🧭 Escolher Estrutura</a>
+          <a href="#estruturas-copiaveis">📋 Estruturas Copiáveis</a>
+          <a href="#componentes-prontos">🧰 Componentes Prontos</a>
+          <a href="#laboratorio-erros">🧪 Laboratório de Erros</a>
+
+          <span class="sidebar__group">FUNDAMENTOS</span>
+          <a href="#html">🧱 HTML Semântico</a>
+          <a href="#classes">🏷️ Classes Estratégicas</a>
+          <a href="#css">🎨 CSS ME Standard</a>
+          <a href="#layout">📐 Layout</a>
+          <a href="#responsivo">📱 Responsividade</a>
+          <a href="#acessibilidade">♿ Acessibilidade</a>
+
+          <span class="sidebar__group">VALIDAÇÃO E CARREIRA</span>
+          <a href="#ferramentas">🔍 Ferramentas</a>
+          <a href="#checklists">✅ Checklists</a>
+          <a href="#github">🧬 GitHub</a>
+          <a href="#recrutadores">💼 Recrutadores</a>
           <a href="#modelos">🧱 Modelos</a>
           <a href="#evolucao">🧭 Evolução</a>
         </nav>
@@ -115,70 +110,6 @@
               <h3>🔍 Validação</h3>
               <p>Ferramentas, checklists e olhar humano antes de aprovar qualquer projeto.</p>
             </article>
-          </div>
-        </section>
-
-        <section id="mapa-manual" class="section-card section-card--guide">
-          <span class="eyebrow">Navegação profissional</span>
-          <h2>🧭 Mapa do Manual</h2>
-
-          <p>
-            O Ouro do Dev agora funciona como uma bússola por áreas. Primeiro eu entendo o objetivo,
-            depois estudo HTML, CSS e JavaScript em camadas, valido com ferramentas e transformo o
-            projeto em evidência de carreira.
-          </p>
-
-          <div class="manual-map" aria-label="Grupos principais do manual">
-            <article class="map-card">
-              <span>01</span>
-              <h3>Início / Orientação</h3>
-              <p>Define mentalidade, modo de uso, trilha e fluxo para não estudar fora de ordem.</p>
-              <a href="#como-usar-manual">Abrir orientação</a>
-            </article>
-
-            <article class="map-card">
-              <span>02</span>
-              <h3>HTML</h3>
-              <p>Constrói a estrutura semântica, acessível, organizada e pronta para receber CSS.</p>
-              <a href="#html-estrutura-zero">Começar HTML</a>
-            </article>
-
-            <article class="map-card">
-              <span>03</span>
-              <h3>CSS</h3>
-              <p>Cria sistema visual, layout, componentes e responsividade sem quebrar o celular.</p>
-              <a href="#css-base-zero">Começar CSS</a>
-            </article>
-
-            <article class="map-card">
-              <span>04</span>
-              <h3>JavaScript</h3>
-              <p>Adiciona comportamento real com DOM, eventos, formulários e interações simples.</p>
-              <a href="#js-base-zero">Começar JS</a>
-            </article>
-
-            <article class="map-card">
-              <span>05</span>
-              <h3>Ferramentas</h3>
-              <p>Reúne inspeção total, checklists, testes manuais, acessibilidade e erros comuns.</p>
-              <a href="#inspecao-total">Validar projeto</a>
-            </article>
-
-            <article class="map-card">
-              <span>06</span>
-              <h3>Carreira</h3>
-              <p>Organiza GitHub, README, portfólio, projetos práticos, estruturas e componentes.</p>
-              <a href="#github-readme-profissional">Preparar carreira</a>
-            </article>
-          </div>
-
-          <div class="reading-system">
-            <h3>📌 Padrão de leitura das seções importantes</h3>
-            <p>
-              Sempre que fizer sentido, leia cada assunto procurando esta hierarquia: o que é, por que
-              importa, quando usar, como pensar antes de fazer, passo a passo, exemplo simples,
-              exemplo profissional, erros comuns, checklist de aprovação e como explicar em entrevista.
-            </p>
           </div>
         </section>
 
