@@ -24,10 +24,6 @@ function updateActiveLink() {
 }
 
 function updateBackToTopButton() {
-  if (!backToTopButton) {
-    return;
-  }
-
   if (window.scrollY > 700) {
     backToTopButton.classList.add("is-visible");
   } else {
@@ -35,25 +31,22 @@ function updateBackToTopButton() {
   }
 }
 
-if (backToTopButton) {
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
-}
+});
 
 checklistInputs.forEach((input, index) => {
-  const storageKey = `ouro-dev-check-${index}`;
-  const savedValue = localStorage.getItem(storageKey);
+  const savedValue = localStorage.getItem(`ouro-dev-check-${index}`);
 
   if (savedValue === "true") {
     input.checked = true;
   }
 
   input.addEventListener("change", () => {
-    localStorage.setItem(storageKey, input.checked);
+    localStorage.setItem(`ouro-dev-check-${index}`, input.checked);
   });
 });
 
