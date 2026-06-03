@@ -59,6 +59,7 @@
           <a href="#projetos-praticos">🧪 Projetos Práticos</a>
           <a href="#biblioteca-estruturas">🧱 Estruturas de Projetos</a>
           <a href="#escolher-estrutura">🧭 Escolher Estrutura</a>
+          <a href="#estruturas-copiaveis">📋 Estruturas Copiáveis</a>
 
           <span class="sidebar__group">FUNDAMENTOS</span>
           <a href="#html">🧱 HTML Semântico</a>
@@ -6359,6 +6360,491 @@ Repositório: [cole o link]</code></pre>
           <blockquote>
             Estrutura escolhida. Agora eu sei que tipo de projeto estou criando, quais blocos ele
             precisa ter e qual caminho seguir dentro do Ouro do Dev.
+          </blockquote>
+        </section>
+
+
+
+        <section id="estruturas-copiaveis" class="section-card">
+          <span class="eyebrow">Modelos reais para começar</span>
+          <h2>📋 Estruturas Copiáveis por Tipo de Projeto</h2>
+
+          <p>
+            Esta seção traz estruturas reais para iniciar projetos com organização profissional.
+            Aqui eu não vejo apenas o tipo de projeto: eu vejo o esqueleto inicial, as seções,
+            as classes principais e a lógica de construção.
+          </p>
+
+          <blockquote>
+            Quando eu for iniciar um projeto, eu escolho o modelo mais parecido, copio a estrutura,
+            adapto o conteúdo e sigo o fluxo: HTML aprovado → CSS aprovado → JS aprovado → publicação.
+          </blockquote>
+
+          <h3>🚀 Estrutura 1 — Landing Page</h3>
+
+          <p>
+            Use para página de venda, apresentação de serviço, campanha, produto, captura de contato
+            ou chamada para ação.
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;div class="container header-layout"&gt;
+      &lt;a class="site-logo" href="index.html"&gt;Marca&lt;/a&gt;
+
+      &lt;nav class="site-nav" aria-label="Navegação principal"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#beneficios"&gt;Benefícios&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#como-funciona"&gt;Como funciona&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class="page-main"&gt;
+    &lt;section class="hero" id="inicio"&gt;
+      &lt;div class="container hero-layout"&gt;
+        &lt;div class="hero-content"&gt;
+          &lt;span class="eyebrow"&gt;Solução profissional&lt;/span&gt;
+          &lt;h1&gt;Título forte da promessa principal&lt;/h1&gt;
+          &lt;p&gt;Texto curto explicando o valor da página.&lt;/p&gt;
+          &lt;a class="btn btn--primary" href="#contato"&gt;Quero saber mais&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="hero-media"&gt;
+          &lt;img src="assets/imagens/hero.jpg" alt="Descrição da imagem principal" /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="beneficios"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="section-header"&gt;
+          &lt;h2&gt;Benefícios principais&lt;/h2&gt;
+          &lt;p&gt;Explique por que essa solução importa.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="cards-grid"&gt;
+          &lt;article class="card"&gt;
+            &lt;h3&gt;Benefício 1&lt;/h3&gt;
+            &lt;p&gt;Descrição do benefício.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article class="card"&gt;
+            &lt;h3&gt;Benefício 2&lt;/h3&gt;
+            &lt;p&gt;Descrição do benefício.&lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article class="card"&gt;
+            &lt;h3&gt;Benefício 3&lt;/h3&gt;
+            &lt;p&gt;Descrição do benefício.&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="como-funciona"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Como funciona&lt;/h2&gt;
+
+        &lt;ol class="steps-list"&gt;
+          &lt;li&gt;Primeiro passo do processo.&lt;/li&gt;
+          &lt;li&gt;Segundo passo do processo.&lt;/li&gt;
+          &lt;li&gt;Terceiro passo do processo.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section cta-section" id="contato"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Chamada final para ação&lt;/h2&gt;
+        &lt;p&gt;Convide o usuário a tomar uma decisão.&lt;/p&gt;
+        &lt;a class="btn btn--primary" href="mailto:email@exemplo.com"&gt;Entrar em contato&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="site-footer"&gt;
+    &lt;div class="container"&gt;
+      &lt;p&gt;© 2026 Marca. Todos os direitos reservados.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>🔐 Estrutura 2 — Tela de Login</h3>
+
+          <p>
+            Use para treinar formulário, acessibilidade, centralização, validação e experiência de entrada.
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;main class="auth-page"&gt;
+    &lt;section class="auth-card" aria-labelledby="login-title"&gt;
+      &lt;div class="auth-header"&gt;
+        &lt;a class="site-logo" href="index.html"&gt;Marca&lt;/a&gt;
+        &lt;h1 id="login-title"&gt;Entrar na conta&lt;/h1&gt;
+        &lt;p&gt;Acesse sua área usando email e senha.&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;form class="auth-form" action="#" method="post"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="email"&gt;Email&lt;/label&gt;
+          &lt;input type="email" id="email" name="email" required /&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-group"&gt;
+          &lt;label for="senha"&gt;Senha&lt;/label&gt;
+          &lt;input type="password" id="senha" name="senha" required /&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-row"&gt;
+          &lt;label class="checkbox-field"&gt;
+            &lt;input type="checkbox" name="lembrar" /&gt;
+            &lt;span&gt;Lembrar acesso&lt;/span&gt;
+          &lt;/label&gt;
+
+          &lt;a href="#recuperar-senha"&gt;Esqueci a senha&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;button class="btn btn--primary" type="submit"&gt;Entrar&lt;/button&gt;
+
+        &lt;p class="form-message" aria-live="polite"&gt;&lt;/p&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>🧑‍💻 Estrutura 3 — Portfólio Pessoal</h3>
+
+          <p>
+            Use para apresentar sua identidade profissional, projetos, habilidades e links importantes.
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;div class="container header-layout"&gt;
+      &lt;a class="site-logo" href="index.html"&gt;Mateus Ernandes&lt;/a&gt;
+
+      &lt;nav class="site-nav" aria-label="Navegação principal"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#projetos"&gt;Projetos&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#habilidades"&gt;Habilidades&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class="page-main"&gt;
+    &lt;section class="hero"&gt;
+      &lt;div class="container hero-layout"&gt;
+        &lt;div class="hero-content"&gt;
+          &lt;span class="eyebrow"&gt;Desenvolvedor Front-End&lt;/span&gt;
+          &lt;h1&gt;Eu construo interfaces organizadas, responsivas e acessíveis.&lt;/h1&gt;
+          &lt;p&gt;Portfólio de projetos, estudos e evolução profissional em front-end.&lt;/p&gt;
+
+          &lt;div class="hero-actions"&gt;
+            &lt;a class="btn btn--primary" href="#projetos"&gt;Ver projetos&lt;/a&gt;
+            &lt;a class="btn btn--outline" href="#contato"&gt;Contato&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="sobre"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Sobre mim&lt;/h2&gt;
+        &lt;p&gt;Texto profissional sobre sua jornada, foco e evolução.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="projetos"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Projetos&lt;/h2&gt;
+
+        &lt;div class="cards-grid"&gt;
+          &lt;article class="project-card"&gt;
+            &lt;h3&gt;Nome do projeto&lt;/h3&gt;
+            &lt;p&gt;Resumo do projeto e tecnologias usadas.&lt;/p&gt;
+            &lt;a href="#"&gt;Ver projeto&lt;/a&gt;
+            &lt;a href="#"&gt;Ver código&lt;/a&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="habilidades"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Habilidades&lt;/h2&gt;
+        &lt;ul class="skills-list"&gt;
+          &lt;li&gt;HTML5&lt;/li&gt;
+          &lt;li&gt;CSS3&lt;/li&gt;
+          &lt;li&gt;JavaScript&lt;/li&gt;
+          &lt;li&gt;Git e GitHub&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="contato"&gt;
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Contato&lt;/h2&gt;
+        &lt;p&gt;Disponível para oportunidades, projetos e networking.&lt;/p&gt;
+        &lt;a class="btn btn--primary" href="mailto:email@exemplo.com"&gt;Enviar email&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>✅ Estrutura 4 — To-do List</h3>
+
+          <p>
+            Use para praticar DOM, eventos, criação de itens, remoção, estados e localStorage.
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;main class="todo-page"&gt;
+    &lt;section class="todo-card" aria-labelledby="todo-title"&gt;
+      &lt;header class="todo-header"&gt;
+        &lt;h1 id="todo-title"&gt;Minha lista de tarefas&lt;/h1&gt;
+        &lt;p&gt;Adicione, conclua e organize suas tarefas.&lt;/p&gt;
+      &lt;/header&gt;
+
+      &lt;form class="todo-form"&gt;
+        &lt;label class="sr-only" for="task-input"&gt;Nova tarefa&lt;/label&gt;
+        &lt;input
+          type="text"
+          id="task-input"
+          name="task"
+          placeholder="Digite uma tarefa"
+          required
+        /&gt;
+        &lt;button class="btn btn--primary" type="submit"&gt;Adicionar&lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;div class="todo-feedback" aria-live="polite"&gt;&lt;/div&gt;
+
+      &lt;ul class="todo-list"&gt;
+        &lt;li class="todo-item"&gt;
+          &lt;span&gt;Exemplo de tarefa&lt;/span&gt;
+          &lt;div class="todo-actions"&gt;
+            &lt;button type="button"&gt;Concluir&lt;/button&gt;
+            &lt;button type="button"&gt;Remover&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>📊 Estrutura 5 — Dashboard Simples</h3>
+
+          <p>
+            Use para treinar layout com sidebar, cards de métricas, tabelas, filtros e organização visual.
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;div class="dashboard-layout"&gt;
+    &lt;aside class="dashboard-sidebar"&gt;
+      &lt;a class="site-logo" href="index.html"&gt;Painel&lt;/a&gt;
+
+      &lt;nav class="dashboard-nav" aria-label="Navegação do painel"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#resumo"&gt;Resumo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#relatorios"&gt;Relatórios&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#usuarios"&gt;Usuários&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/aside&gt;
+
+    &lt;main class="dashboard-main"&gt;
+      &lt;header class="dashboard-header"&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Dashboard&lt;/h1&gt;
+          &lt;p&gt;Resumo geral das informações principais.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/header&gt;
+
+      &lt;section class="metrics-grid" id="resumo"&gt;
+        &lt;article class="metric-card"&gt;
+          &lt;span&gt;Projetos&lt;/span&gt;
+          &lt;strong&gt;12&lt;/strong&gt;
+        &lt;/article&gt;
+
+        &lt;article class="metric-card"&gt;
+          &lt;span&gt;Tarefas&lt;/span&gt;
+          &lt;strong&gt;34&lt;/strong&gt;
+        &lt;/article&gt;
+
+        &lt;article class="metric-card"&gt;
+          &lt;span&gt;Concluídas&lt;/span&gt;
+          &lt;strong&gt;20&lt;/strong&gt;
+        &lt;/article&gt;
+      &lt;/section&gt;
+
+      &lt;section class="dashboard-section" id="relatorios"&gt;
+        &lt;h2&gt;Relatórios&lt;/h2&gt;
+
+        &lt;div class="table-wrapper"&gt;
+          &lt;table&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Nome&lt;/th&gt;
+                &lt;th&gt;Status&lt;/th&gt;
+                &lt;th&gt;Data&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Projeto exemplo&lt;/td&gt;
+                &lt;td&gt;Em andamento&lt;/td&gt;
+                &lt;td&gt;2026&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>📨 Estrutura 6 — Formulário de Contato</h3>
+
+          <pre><code>&lt;body&gt;
+  &lt;main class="page-main"&gt;
+    &lt;section class="contact-section"&gt;
+      &lt;div class="container contact-layout"&gt;
+        &lt;div class="contact-content"&gt;
+          &lt;span class="eyebrow"&gt;Contato&lt;/span&gt;
+          &lt;h1&gt;Fale comigo&lt;/h1&gt;
+          &lt;p&gt;Envie uma mensagem para oportunidades, dúvidas ou projetos.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;form class="contact-form" action="#" method="post"&gt;
+          &lt;div class="form-group"&gt;
+            &lt;label for="nome"&gt;Nome&lt;/label&gt;
+            &lt;input type="text" id="nome" name="nome" required /&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label for="email"&gt;Email&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required /&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label for="assunto"&gt;Assunto&lt;/label&gt;
+            &lt;input type="text" id="assunto" name="assunto" required /&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label for="mensagem"&gt;Mensagem&lt;/label&gt;
+            &lt;textarea id="mensagem" name="mensagem" rows="6" required&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+
+          &lt;button class="btn btn--primary" type="submit"&gt;Enviar mensagem&lt;/button&gt;
+          &lt;p class="form-message" aria-live="polite"&gt;&lt;/p&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>🖼️ Estrutura 7 — Galeria de Imagens</h3>
+
+          <pre><code>&lt;body&gt;
+  &lt;main class="page-main"&gt;
+    &lt;section class="gallery-section"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="section-header"&gt;
+          &lt;span class="eyebrow"&gt;Galeria&lt;/span&gt;
+          &lt;h1&gt;Galeria de imagens&lt;/h1&gt;
+          &lt;p&gt;Coleção de imagens organizadas com legenda e acessibilidade.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="gallery-grid"&gt;
+          &lt;figure class="gallery-card"&gt;
+            &lt;img src="assets/imagens/imagem-1.jpg" alt="Descrição da imagem 1" /&gt;
+            &lt;figcaption&gt;Legenda da imagem 1&lt;/figcaption&gt;
+          &lt;/figure&gt;
+
+          &lt;figure class="gallery-card"&gt;
+            &lt;img src="assets/imagens/imagem-2.jpg" alt="Descrição da imagem 2" /&gt;
+            &lt;figcaption&gt;Legenda da imagem 2&lt;/figcaption&gt;
+          &lt;/figure&gt;
+
+          &lt;figure class="gallery-card"&gt;
+            &lt;img src="assets/imagens/imagem-3.jpg" alt="Descrição da imagem 3" /&gt;
+            &lt;figcaption&gt;Legenda da imagem 3&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>📰 Estrutura 8 — Blog ou Artigo</h3>
+
+          <pre><code>&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    &lt;div class="container"&gt;
+      &lt;a class="site-logo" href="index.html"&gt;Blog&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class="article-page"&gt;
+    &lt;article class="article-content"&gt;
+      &lt;header class="article-header"&gt;
+        &lt;span class="eyebrow"&gt;Front-End&lt;/span&gt;
+        &lt;h1&gt;Título do artigo&lt;/h1&gt;
+        &lt;p&gt;Resumo curto do conteúdo do artigo.&lt;/p&gt;
+
+        &lt;div class="article-meta"&gt;
+          &lt;span&gt;Por Mateus Ernandes&lt;/span&gt;
+          &lt;time datetime="2026-06-02"&gt;02 de junho de 2026&lt;/time&gt;
+        &lt;/div&gt;
+      &lt;/header&gt;
+
+      &lt;section&gt;
+        &lt;h2&gt;Primeira seção do artigo&lt;/h2&gt;
+        &lt;p&gt;Conteúdo do artigo com explicação clara.&lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;section&gt;
+        &lt;h2&gt;Segunda seção do artigo&lt;/h2&gt;
+        &lt;p&gt;Continuação do conteúdo.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/article&gt;
+
+    &lt;aside class="article-sidebar"&gt;
+      &lt;h2&gt;Conteúdos relacionados&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Outro artigo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Mais um conteúdo&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+
+          <h3>✅ Checklist para usar uma estrutura copiável</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Escolhi o modelo mais próximo do projeto</li>
+            <li><input type="checkbox" /> Adaptei textos e seções ao meu objetivo</li>
+            <li><input type="checkbox" /> Mantive tags semânticas</li>
+            <li><input type="checkbox" /> Mantive classes estratégicas</li>
+            <li><input type="checkbox" /> Ajustei imagens com alt correto</li>
+            <li><input type="checkbox" /> Ajustei formulários com label, id e name</li>
+            <li><input type="checkbox" /> Preparei CSS antes de inventar visual</li>
+            <li><input type="checkbox" /> Só adicionei JS se houver necessidade real</li>
+          </ul>
+
+          <h3>🏁 Declaração de uso</h3>
+
+          <blockquote>
+            Estrutura copiável escolhida. Agora eu tenho um esqueleto real para começar o projeto
+            com HTML organizado, classes profissionais e caminho claro para CSS, JS, validação e publicação.
           </blockquote>
         </section>
 
