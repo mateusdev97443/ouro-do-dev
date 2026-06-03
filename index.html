@@ -60,6 +60,7 @@
           <a href="#biblioteca-estruturas">🧱 Estruturas de Projetos</a>
           <a href="#escolher-estrutura">🧭 Escolher Estrutura</a>
           <a href="#estruturas-copiaveis">📋 Estruturas Copiáveis</a>
+          <a href="#componentes-prontos">🧰 Componentes Prontos</a>
 
           <span class="sidebar__group">FUNDAMENTOS</span>
           <a href="#html">🧱 HTML Semântico</a>
@@ -6845,6 +6846,271 @@ Repositório: [cole o link]</code></pre>
           <blockquote>
             Estrutura copiável escolhida. Agora eu tenho um esqueleto real para começar o projeto
             com HTML organizado, classes profissionais e caminho claro para CSS, JS, validação e publicação.
+          </blockquote>
+        </section>
+
+
+
+        <section id="componentes-prontos" class="section-card">
+          <span class="eyebrow">Biblioteca reutilizável</span>
+          <h2>🧰 Biblioteca de Componentes Prontos</h2>
+
+          <p>
+            Esta seção reúne componentes comuns que aparecem em muitos projetos front-end.
+            Em vez de começar cada parte do zero, eu posso consultar um componente profissional,
+            copiar a base, adaptar ao projeto e validar com o Ouro do Dev.
+          </p>
+
+          <blockquote>
+            Estrutura define o projeto. Componente constrói a interface. Um dev profissional sabe
+            montar páginas usando blocos reutilizáveis, claros, acessíveis e responsivos.
+          </blockquote>
+
+          <h3>🏛️ Componente 1 — Header profissional</h3>
+
+          <pre><code>&lt;header class="site-header"&gt;
+  &lt;div class="container header-layout"&gt;
+    &lt;a class="site-logo" href="index.html"&gt;Marca&lt;/a&gt;
+
+    &lt;nav class="site-nav" aria-label="Navegação principal"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#inicio"&gt;Início&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#projetos"&gt;Projetos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+
+          <h3>🚀 Componente 2 — Hero profissional</h3>
+
+          <pre><code>&lt;section class="hero" id="inicio"&gt;
+  &lt;div class="container hero-layout"&gt;
+    &lt;div class="hero-content"&gt;
+      &lt;span class="eyebrow"&gt;Desenvolvimento Front-End&lt;/span&gt;
+      &lt;h1&gt;Título forte, claro e direto do projeto&lt;/h1&gt;
+      &lt;p&gt;
+        Texto curto explicando o valor principal da página, serviço, produto
+        ou projeto.
+      &lt;/p&gt;
+
+      &lt;div class="hero-actions"&gt;
+        &lt;a class="btn btn--primary" href="#projetos"&gt;Ver projetos&lt;/a&gt;
+        &lt;a class="btn btn--outline" href="#contato"&gt;Entrar em contato&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="hero-media"&gt;
+      &lt;img src="assets/imagens/hero.jpg" alt="Descrição clara da imagem" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+          <h3>🔘 Componente 3 — Botões</h3>
+
+          <pre><code>&lt;div class="button-group"&gt;
+  &lt;a class="btn btn--primary" href="#acao"&gt;Ação principal&lt;/a&gt;
+  &lt;a class="btn btn--outline" href="#detalhes"&gt;Ver detalhes&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+          <pre><code>.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #111827;
+}
+
+.btn--outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}</code></pre>
+
+          <h3>🃏 Componente 4 — Card simples</h3>
+
+          <pre><code>&lt;article class="card"&gt;
+  &lt;h3&gt;Título do card&lt;/h3&gt;
+  &lt;p&gt;Texto curto explicando o conteúdo ou benefício deste card.&lt;/p&gt;
+  &lt;a href="#detalhes"&gt;Saiba mais&lt;/a&gt;
+&lt;/article&gt;</code></pre>
+
+          <h3>🧩 Componente 5 — Grid de cards</h3>
+
+          <pre><code>&lt;div class="cards-grid"&gt;
+  &lt;article class="card"&gt;
+    &lt;h3&gt;Card 1&lt;/h3&gt;
+    &lt;p&gt;Descrição do primeiro card.&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article class="card"&gt;
+    &lt;h3&gt;Card 2&lt;/h3&gt;
+    &lt;p&gt;Descrição do segundo card.&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article class="card"&gt;
+    &lt;h3&gt;Card 3&lt;/h3&gt;
+    &lt;p&gt;Descrição do terceiro card.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+
+          <pre><code>.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}</code></pre>
+
+          <h3>📝 Componente 6 — Formulário profissional</h3>
+
+          <pre><code>&lt;form class="contact-form" action="#" method="post"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="nome"&gt;Nome&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required /&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label for="mensagem"&gt;Mensagem&lt;/label&gt;
+    &lt;textarea id="mensagem" name="mensagem" rows="6" required&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;button class="btn btn--primary" type="submit"&gt;Enviar mensagem&lt;/button&gt;
+  &lt;p class="form-message" aria-live="polite"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+
+          <h3>📊 Componente 7 — Tabela responsiva</h3>
+
+          <pre><code>&lt;div class="table-wrapper"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Status&lt;/th&gt;
+        &lt;th&gt;Data&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Projeto exemplo&lt;/td&gt;
+        &lt;td&gt;Em andamento&lt;/td&gt;
+        &lt;td&gt;2026&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3>❓ Componente 8 — FAQ simples</h3>
+
+          <pre><code>&lt;section class="section faq-section" id="faq"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="section-header"&gt;
+      &lt;h2&gt;Perguntas frequentes&lt;/h2&gt;
+      &lt;p&gt;Respostas rápidas para dúvidas comuns.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="faq-list"&gt;
+      &lt;details class="faq-item"&gt;
+        &lt;summary&gt;Pergunta frequente 1&lt;/summary&gt;
+        &lt;p&gt;Resposta clara e objetiva da pergunta.&lt;/p&gt;
+      &lt;/details&gt;
+
+      &lt;details class="faq-item"&gt;
+        &lt;summary&gt;Pergunta frequente 2&lt;/summary&gt;
+        &lt;p&gt;Resposta clara e objetiva da pergunta.&lt;/p&gt;
+      &lt;/details&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+          <h3>💬 Componente 9 — Mensagem visual</h3>
+
+          <pre><code>&lt;p class="alert-message" role="status"&gt;
+  Mensagem enviada com sucesso.
+&lt;/p&gt;</code></pre>
+
+          <pre><code>.alert-message {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+}</code></pre>
+
+          <h3>📌 Componente 10 — Card de projeto</h3>
+
+          <pre><code>&lt;article class="project-card"&gt;
+  &lt;img src="assets/imagens/projeto.jpg" alt="Prévia do projeto" /&gt;
+
+  &lt;div class="project-card__content"&gt;
+    &lt;h3&gt;Nome do projeto&lt;/h3&gt;
+    &lt;p&gt;
+      Resumo curto explicando objetivo, tecnologias usadas e o que foi praticado.
+    &lt;/p&gt;
+
+    &lt;ul class="tech-list"&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="project-card__actions"&gt;
+      &lt;a href="#"&gt;Ver projeto&lt;/a&gt;
+      &lt;a href="#"&gt;Ver código&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+
+          <h3>🏁 Componente 11 — Footer profissional</h3>
+
+          <pre><code>&lt;footer class="site-footer"&gt;
+  &lt;div class="container footer-layout"&gt;
+    &lt;div&gt;
+      &lt;strong&gt;Nome do Projeto&lt;/strong&gt;
+      &lt;p&gt;Descrição curta ou frase de fechamento.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;nav aria-label="Links finais"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#inicio"&gt;Início&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#projetos"&gt;Projetos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+          <h3>✅ Checklist para usar componentes prontos</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Escolhi o componente certo para a necessidade</li>
+            <li><input type="checkbox" /> Mantive HTML semântico</li>
+            <li><input type="checkbox" /> Mantive classes estratégicas</li>
+            <li><input type="checkbox" /> Adaptei textos e links ao projeto real</li>
+            <li><input type="checkbox" /> Corrigi alt, labels e aria quando necessário</li>
+            <li><input type="checkbox" /> Testei o componente no celular</li>
+            <li><input type="checkbox" /> O componente respeita o CSS ME Standard</li>
+            <li><input type="checkbox" /> O componente não foi copiado sem entendimento</li>
+          </ul>
+
+          <h3>🏁 Declaração de uso</h3>
+
+          <blockquote>
+            Componente escolhido e adaptado. Agora eu uso esse bloco como peça profissional dentro
+            do projeto, respeitando semântica, acessibilidade, responsividade e validação.
           </blockquote>
         </section>
 
