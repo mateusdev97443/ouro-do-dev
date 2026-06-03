@@ -831,6 +831,245 @@ touch scripts/script.js</code></pre>
 
 
 
+
+          <h3>📘 Explicação profunda — o que estou construindo no HTML?</h3>
+
+          <p>
+            HTML não é apenas um arquivo cheio de tags. HTML é o documento que dá significado para a
+            página. Ele diz ao navegador, ao usuário, ao Google, ao leitor de tela e ao próximo
+            desenvolvedor o que cada parte representa.
+          </p>
+
+          <p>
+            Quando eu escrevo HTML, eu não estou pensando em cor, sombra ou animação ainda. Eu estou
+            pensando em estrutura, ordem, conteúdo, acessibilidade e clareza. O CSS vem depois para
+            melhorar o visual. O JavaScript vem depois para adicionar comportamento.
+          </p>
+
+          <blockquote>
+            A pergunta principal do HTML é: “essa página faz sentido mesmo sem CSS?”
+          </blockquote>
+
+          <h3>🧠 Antes de codar — perguntas que evitam bagunça</h3>
+
+          <p>
+            Antes de abrir o arquivo e sair escrevendo tags, eu preciso entender o projeto. Isso evita
+            criar seções aleatórias, classes sem padrão e HTML difícil de manter.
+          </p>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Qual é o tema do projeto?</li>
+            <li><input type="checkbox" /> Qual é o objetivo da página?</li>
+            <li><input type="checkbox" /> Quem vai usar ou avaliar essa página?</li>
+            <li><input type="checkbox" /> A página é informativa, comercial, interativa ou de portfólio?</li>
+            <li><input type="checkbox" /> Quais seções são obrigatórias?</li>
+            <li><input type="checkbox" /> Vou precisar de imagem, tabela, formulário, vídeo ou iframe?</li>
+            <li><input type="checkbox" /> O projeto precisa virar evidência profissional?</li>
+          </ul>
+
+          <h3>🏗️ Anatomia profissional de um documento HTML</h3>
+
+          <p>
+            Um arquivo HTML profissional tem duas grandes áreas: <code>head</code> e <code>body</code>.
+            O <code>head</code> prepara o documento. O <code>body</code> contém aquilo que aparece para
+            o usuário.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Parte</th>
+                  <th>Função</th>
+                  <th>Por que importa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;!doctype html&gt;</code></td>
+                  <td>Declara HTML moderno</td>
+                  <td>Evita comportamento antigo do navegador.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;html lang="pt-BR"&gt;</code></td>
+                  <td>Define idioma</td>
+                  <td>Ajuda acessibilidade, SEO e tradução.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;head&gt;</code></td>
+                  <td>Configurações da página</td>
+                  <td>Contém charset, viewport, title, description e CSS.</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;body&gt;</code></td>
+                  <td>Conteúdo visível</td>
+                  <td>Contém header, main, sections, forms, tables e footer.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>🧾 Exemplo comentado de base HTML</h3>
+
+          <p>
+            Este é o esqueleto mínimo que eu preciso entender antes de avançar:
+          </p>
+
+          <pre><code>&lt;!doctype html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;!-- Permite acentos e caracteres corretos --&gt;
+    &lt;meta charset="UTF-8" /&gt;
+
+    &lt;!-- Faz a página respeitar o tamanho da tela no celular --&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+
+    &lt;!-- Aparece na aba do navegador e influencia apresentação do projeto --&gt;
+    &lt;title&gt;Nome do Projeto&lt;/title&gt;
+
+    &lt;!-- Explica o objetivo da página para buscadores e compartilhamentos --&gt;
+    &lt;meta name="description" content="Descrição clara e profissional do projeto." /&gt;
+
+    &lt;!-- Conecta o arquivo CSS --&gt;
+    &lt;link rel="stylesheet" href="styles/style.css" /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;!-- Conteúdo visível da página entra aqui --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <h3>🏛️ Como pensar no body</h3>
+
+          <p>
+            O <code>body</code> precisa ter ordem. Em projetos comuns, a estrutura mais segura é:
+          </p>
+
+          <pre><code>&lt;body&gt;
+  &lt;header class="site-header"&gt;
+    Topo, logo e navegação
+  &lt;/header&gt;
+
+  &lt;main class="page-main"&gt;
+    Conteúdo principal da página
+  &lt;/main&gt;
+
+  &lt;footer class="site-footer"&gt;
+    Rodapé, direitos e links finais
+  &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+          <p>
+            O <code>main</code> deve representar o conteúdo principal. Normalmente existe apenas um
+            <code>main</code> por página. Dentro dele entram as seções principais do projeto.
+          </p>
+
+          <h3>🧩 Exemplo real — página simples de projeto</h3>
+
+          <p>
+            Este exemplo mostra uma estrutura clara para uma página simples:
+          </p>
+
+          <pre><code>&lt;main class="page-main"&gt;
+  &lt;section class="hero" id="inicio"&gt;
+    &lt;div class="container"&gt;
+      &lt;h1&gt;Pesca Esportiva&lt;/h1&gt;
+      &lt;p&gt;Conheça modalidades, equipamentos e experiências da pesca esportiva.&lt;/p&gt;
+      &lt;a class="btn btn--primary" href="#contato"&gt;Entrar em contato&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section" id="modalidades"&gt;
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Modalidades&lt;/h2&gt;
+      &lt;p&gt;Apresente os principais tipos de pesca esportiva.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section" id="galeria"&gt;
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Galeria&lt;/h2&gt;
+      &lt;p&gt;Mostre imagens do projeto com alt descritivo.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="section" id="contato"&gt;
+    &lt;div class="container"&gt;
+      &lt;h2&gt;Contato&lt;/h2&gt;
+      &lt;p&gt;Inclua formulário ou informações de contato.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+
+          <h3>🏷️ Por que usar classes estratégicas desde o HTML?</h3>
+
+          <p>
+            Classes estratégicas preparam o CSS. Elas não devem ser nomes aleatórios como
+            <code>coisa1</code>, <code>blocoazul</code> ou <code>textoGrande</code>. O nome da classe
+            deve explicar o papel daquele bloco.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Classe ruim</th>
+                  <th>Classe profissional</th>
+                  <th>Motivo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.azul</code></td>
+                  <td><code>.btn--primary</code></td>
+                  <td>A classe profissional fala da função, não só da cor.</td>
+                </tr>
+                <tr>
+                  <td><code>.parte1</code></td>
+                  <td><code>.hero</code></td>
+                  <td>Mostra que é a primeira dobra importante da página.</td>
+                </tr>
+                <tr>
+                  <td><code>.caixa</code></td>
+                  <td><code>.card</code></td>
+                  <td>Indica componente reutilizável.</td>
+                </tr>
+                <tr>
+                  <td><code>.meio</code></td>
+                  <td><code>.container</code></td>
+                  <td>Indica controle de largura e centralização.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>🚫 Erros que deixam o HTML fraco</h3>
+
+          <ul class="feature-list">
+            <li>Começar pelo CSS sem ter estrutura HTML clara.</li>
+            <li>Usar várias <code>div</code> sem entender o papel de cada bloco.</li>
+            <li>Colocar muitos <code>h1</code> sem critério.</li>
+            <li>Criar seções sem título.</li>
+            <li>Usar imagem importante sem <code>alt</code>.</li>
+            <li>Criar formulário sem <code>label</code>.</li>
+            <li>Usar classes genéricas demais.</li>
+            <li>Não conseguir explicar a estrutura do próprio projeto.</li>
+          </ul>
+
+          <h3>✅ Checklist mestre antes de liberar para conteúdo e CSS</h3>
+
+          <ul class="checklist">
+            <li><input type="checkbox" /> Eu sei explicar o objetivo da página</li>
+            <li><input type="checkbox" /> O arquivo possui base HTML completa</li>
+            <li><input type="checkbox" /> O <code>head</code> possui charset, viewport, title, description e CSS</li>
+            <li><input type="checkbox" /> O <code>body</code> possui header, main e footer quando necessário</li>
+            <li><input type="checkbox" /> O <code>main</code> representa o conteúdo principal</li>
+            <li><input type="checkbox" /> As seções principais possuem IDs e títulos claros</li>
+            <li><input type="checkbox" /> As classes foram pensadas para o CSS</li>
+            <li><input type="checkbox" /> A estrutura faz sentido mesmo antes do visual</li>
+          </ul>
+
+
         <section id="html-conteudo-midia" class="section-card">
           <span class="eyebrow">HTML5 na prática</span>
           <h2>📝 HTML5 — Conteúdo, Links, Imagens e Mídia</h2>
